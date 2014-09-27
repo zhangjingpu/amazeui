@@ -1,7 +1,7 @@
 {
     "name": "gotop",
 
-    "version": "2.0.0",
+    "version": "3.0.0",
 
     "localName": {
         "en": "Gotop",
@@ -37,13 +37,12 @@
 
     "themes": [
         {
-            "id": "default",
             "name": "default",
             "desc": "居中按钮",
             "hook": "hook-am-gotop-default",
             "variables": [
                 {
-                    "variable": "gotop-a-bg-color",
+                    "variable": "gotop-link-bg",
                     "name": "背景颜色",
                     "default": "#428bca",
                     "used": [
@@ -54,7 +53,7 @@
                     ]
                 },
                 {
-                    "variable": "gotop-a-text-color",
+                    "variable": "gotop-link-color",
                     "name": "文字颜色",
                     "default": "#fff",
                     "used": [
@@ -70,125 +69,85 @@
                     "desc": "",
                     "data": {
                         "content": {
-                            "hint": "回到顶部"
+                            "title": "回到顶部"
                         }
                     }
                 }
             ]
         },
         {
-            "name": "mini",
-            "id": "t1",
-            "desc": "右侧小图标",
-            "hook": "hook-am-gotop-mini",
+            "name": "fixed",
+            "desc": "右侧悬浮",
+            "hook": "hook-am-gotop-fixed",
             "variables": [
                 {
-                    "variable": "gotop-bg-color",
-                    "name": "背景颜色",
-                    "default": "#123456",
+                    "variable": "gotop-icon-bg",
+                    "name": "图标背景色",
+                    "default": "#555",
                     "used": [
                         {
-                            "selector": "",
+                            "selector": ".am-gotop-icon",
                             "property": "background-color"
                         }
                     ]
                 },
                 {
-                    "variable": "gotop-a-color",
+                    "variable": "gotop-icon-color",
                     "name": "图标颜色",
-                    "default": "#FFFFFF",
+                    "default": "#ddd",
                     "used": [
                         {
-                            "selector": "a:after",
-                            "property": "border-bottom-color"
+                            "selector": ".am-gotop-icon",
+                            "property": "color"
                         }
                     ]
                 },
                 {
-                    "variable": "gotop-border-color",
-                    "name": "边框颜色",
-                    "default": "#3B3B3B",
+                    "variable": "gotop-icon-hover-color",
+                    "name": "图标 Hover 颜色",
+                    "default": "#fff",
                     "used": [
                         {
-                            "selector": "",
-                            "property": "border-color"
+                            "selector": ".am-gotop-icon:hover",
+                            "property": "color"
                         }
                     ]
                 }
             ],
             "demos": [
                 {
-                    "desc": "",
+                    "desc": "默认 Icon",
                     "data": {
-                        "theme": "mini"
+                        "content": {
+                            "title": "回到顶部"
+                        }
+                    }
+                },
+                {
+                    "desc": "设置 Icon",
+                    "data": {
+                        "content": {
+                            "icon": "hand-o-up"
+                        }
+                    }
+                },
+                {
+                    "desc": "自定义图片",
+                    "data": {
+                        "content": {
+                            "customIcon": "http://amazeui.b0.upaiyun.com/assets/i/cpts/gotop/goTop.gif"
+                        }
                     }
                 }
             ]
         },
         {
-            "id": "t2",
-            "name": "icon",
-            "desc": "右侧图片型",
-            "demos": [
-                {
-                    "desc": "",
-                    "data": {
-                        "content": {
-                            "img": "/i/gotop/goTop.gif"
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "id": "clear",
-            "name": "clear",
-            "desc": "ios7默认",
-            "hook": "hook-am-gotop-clear",
-            "variables": [
-                {
-                    "variable": "gotop-a-bg-color",
-                    "name": "背景颜色",
-                    "default": "rgba(255,255,255,0.3)",
-                    "used": [
-                        {
-                            "selector": "",
-                            "property": "background-color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "gotop-a-bd-color",
-                    "name": "边框颜色",
-                    "default": "rgba(0,0,0,0.1)",
-                    "used": [
-                        {
-                            "selector": "",
-                            "property": "border-color"
-                        }
-                    ]
-                }
-            ],
-            "demos": [
-                {
-                    "desc": "",
-                    "data": {
-                        "content": {
-                            "img": "/i/gotop/ios7Gotop.png"
-                        }
-                    }
-                }
-            ],
-            "hidden": 1
-        },
-        {
-            "id": "one",
             "name": "one",
             "desc": "简约风格",
             "hook": "hook-am-gotop-one",
             "variables": [
                 {
-                    "variable": "gotop-bg-color",
+                    "variable": "gotop-bg",
                     "name": "背景颜色",
                     "default": "#fff",
                     "used": [
@@ -199,17 +158,6 @@
                     ]
                 },
                 {
-                    "variable": "gotop-after-color",
-                    "name": "图标颜色",
-                    "default": "#15afef",
-                    "used": [
-                        {
-                            "selector": "a::after",
-                            "property": "color"
-                        }
-                    ]
-                },
-                {
                     "variable": "gotop-border-color",
                     "name": "边框颜色",
                     "default": "#15afef",
@@ -217,6 +165,17 @@
                         {
                             "selector": "",
                             "property": "border-color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "gotop-icon-color",
+                    "name": "图标",
+                    "default": "#15afef",
+                    "used": [
+                        {
+                            "selector": ".am-gotop-icon",
+                            "property": "color"
                         }
                     ]
                 }
@@ -235,6 +194,10 @@
     "jsBase": [
         "core.js",
         "util.fastclick.js"
+    ],
+
+    "jsDependencies": [
+      "ui.smooth-scroll.js"
     ],
 
     "script": "gotop.js",
@@ -285,7 +248,7 @@
 
     "readme": "http://docs.yunshipei.com/amui/#gotop",
 
-    "example": "var data = {\n\t\"img\": \"\",\t\t// 不建议使用，可设置成背景\n    \"hint\": \"回到顶部\"\t// 显示文字\n};\nreturn data;",
+    "example": "/*\n\n 此模块的使用方法：采集原PC网站上的图片数据以及标题内容放到此模块。\n\n 常用用途：回到顶部组件。\n\n 了解Amaze UI的模块详情，请访问http://amazeui.org/widgets/gotop。\n\n*/\n\nvar data = {\n  \"title\":      \"回到顶部\"    // 显示文字（某些主题不显示）\n  \"icon\":       \"arrow-up\"  // 图标名称，使用内置的 Icon Font\n  \"customIcon\": \"\"          // 自定义图标 URL\n};\n\nreturn data;\n",
 
     "hidden": false
 }

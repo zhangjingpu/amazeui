@@ -7,6 +7,11 @@ define(function(require, exports, module) {
     var $ = window.Zepto,
         UI = $.AMUI;
 
+    /**
+     * @via https://github.com/Minwe/bootstrap/blob/master/js/alert.js
+     * @copyright Copyright 2013 Twitter, Inc.
+     * @license Apache 2.0
+     */
 
     // Alert Class
     // NOTE: removeElement option is unavailable now
@@ -15,7 +20,7 @@ define(function(require, exports, module) {
         this.options = $.extend({}, Alert.DEFAULTS, options);
         this.$element = $(element);
 
-        this.$element.addClass('am-fade am-in').on('click', '.am-close', $.proxy(this.close, this));
+        this.$element.addClass('am-fade am-in').on('click.alert.amui', '.am-close', $.proxy(this.close, this));
     };
 
     Alert.DEFAULTS = {
@@ -27,7 +32,7 @@ define(function(require, exports, module) {
             $target = $this.hasClass('am-alert') ? $this : $this.parent('.am-alert');
 
         $target.trigger('close:alert:amui');
-
+        
         $target.removeClass('am-in');
 
         function processAlert() {
@@ -48,9 +53,9 @@ define(function(require, exports, module) {
             var $this = $(this),
                 data = $this.data('amui.alert'),
                 options = typeof option == 'object' && option;
-
+            
             if (!data) {
-                $this.data('amui.alert', (data = new Alert(this, options)));
+                $this.data('amui.alert', (data = new Alert(this, options || {})));
             }
 
             if (typeof option == 'string') {
@@ -66,7 +71,6 @@ define(function(require, exports, module) {
         $(this).addClass('am-fade am-in');
         $target.is('.am-close') && $(this).alert('close');
     });
-
 
     module.exports = Alert;
 });

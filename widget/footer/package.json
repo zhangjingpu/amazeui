@@ -41,9 +41,19 @@
 
     "style": "footer.less",
 
+    "demoContent": {
+        "owner": "云适配",
+        "companyInfo": [{
+            "detail": "CopyRight©2014  AllMobilize Inc."
+        },
+            {
+                "detail": "京ICP备13033158"
+            }
+        ]
+    },
+
     "themes": [
         {
-            "id": "default",
             "name": "default",
             "desc": "默认",
             "options": {
@@ -54,7 +64,7 @@
             "hook": "hook-am-footer-default",
             "variables": [
                 {
-                    "variable": "footer-bg-color",
+                    "variable": "footer-bg",
                     "name": "背景颜色",
                     "default": "#fff",
                     "used": [
@@ -67,21 +77,10 @@
                 {
                     "variable": "footer-ysp-color",
                     "name": "云适配版文字颜色",
-                    "default": "#999",
-                    "used": [
-                        {
-                            "selector": ".am-footer-ysp",
-                            "property": "color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "footer-a-color",
-                    "name": "链接颜色",
                     "default": "#555",
                     "used": [
                         {
-                            "selector": "a",
+                            "selector": ".am-footer-ysp",
                             "property": "color"
                         }
                     ]
@@ -98,12 +97,35 @@
                     ]
                 },
                 {
-                    "variable": "footer-text-color",
-                    "name": "版权信息颜色",
-                    "default": "#eee",
+                    "variable": "footer-desktop-color",
+                    "name": "电脑版颜色",
+                    "default": "#ccc",
                     "used": [
                         {
-                            "selector": ".am-footer-text",
+                            "selector": ".am-footer-desktop",
+                            "property": "color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "footer-link-color",
+                    "name": "链接颜色",
+                    "default": "#555",
+                    "used": [
+                        {
+                            "selector": "a",
+                            "property": "color"
+                        }
+                    ]
+                },
+
+                {
+                    "variable": "footer-miscs-color",
+                    "name": "版权信息颜色",
+                    "default": "#999",
+                    "used": [
+                        {
+                            "selector": ".am-footer-miscs",
                             "property": "color"
                         }
                     ]
@@ -117,35 +139,23 @@
                             "modal": true,
                             "techSupportCo": "诺亚方舟",
                             "techSupportSite": "http://www.yunshipei.com/"
-                        },
-                        "content": {
-                            "owner": "云适配",
-                            "companyInfo": [
-                                {
-                                    "detail": "CopyRight©2013  AllMobilize Inc."
-                                },
-                                {
-                                    "detail": "京ICP备13033158"
-                                }
-                            ]
                         }
                     }
                 }
             ]
         },
         {
-            "id": "clear",
-            "name": "clear",
-            "desc": "ios7默认",
+            "name": "one",
+            "desc": "简约风格",
             "options": {
                 "modal": true,
                 "siteType": "",
                 "textPosition": ""
             },
-            "hook": "hook-am-footer-clear",
+            "hook": "hook-am-footer-one",
             "variables": [
                 {
-                    "variable": "footer-bg-color",
+                    "variable": "footer-bg",
                     "name": "背景颜色",
                     "default": "#fff",
                     "used": [
@@ -158,7 +168,7 @@
                 {
                     "variable": "footer-ysp-color",
                     "name": "云适配版文字颜色",
-                    "default": "#222",
+                    "default": "#555",
                     "used": [
                         {
                             "selector": ".am-footer-ysp",
@@ -167,20 +177,9 @@
                     ]
                 },
                 {
-                    "variable": "footer-a-color",
-                    "name": "链接颜色",
-                    "default": "#007aff",
-                    "used": [
-                        {
-                            "selector": "a",
-                            "property": "color"
-                        }
-                    ]
-                },
-                {
                     "variable": "footer-divider-color",
                     "name": "分隔线颜色",
-                    "default": "#666",
+                    "default": "#ccc",
                     "used": [
                         {
                             "selector": ".am-footer-divider",
@@ -189,68 +188,20 @@
                     ]
                 },
                 {
-                    "variable": "footer-text-color",
-                    "name": "版权信息颜色",
-                    "default": "#777",
+                    "variable": "footer-desktop-color",
+                    "name": "电脑版颜色",
+                    "default": "#ccc",
                     "used": [
                         {
-                            "selector": ".am-footer-text",
-                            "property": "color"
-                        }
-                    ]
-                }
-            ],
-            "demos": [
-                {
-                    "desc": "",
-                    "data": {
-                        "options": {
-                            "modal": true,
-                            "techSupportCo": "诺亚方舟",
-                            "techSupportSite": "http://www.yunshipei.com/"
-                        },
-                        "content": {
-                            "owner": "云适配",
-                            "companyInfo": [
-                                {
-                                    "detail": "CopyRight©2013  AllMobilize Inc."
-                                },
-                                {
-                                    "detail": "京ICP备13033158"
-                                }
-                            ]
-                        }
-                    }
-                }
-            ],
-            "hidden": 1
-        },
-        {
-            "id": "one",
-            "name": "one",
-            "desc": "简约风格",
-            "options": {
-                "modal": true,
-                "siteType": "",
-                "textPosition": ""
-            },
-            "hook": "hook-am-footer-one",
-            "variables": [
-                {
-                    "variable": "footer-ysp-color",
-                    "name": "云适配版文字颜色",
-                    "default": "#15afef",
-                    "used": [
-                        {
-                            "selector": ".am-footer-ysp",
+                            "selector": ".am-footer-desktop",
                             "property": "color"
                         }
                     ]
                 },
                 {
-                    "variable": "footer-a-color",
+                    "variable": "footer-link-color",
                     "name": "链接颜色",
-                    "default": "#15afef",
+                    "default": "#555",
                     "used": [
                         {
                             "selector": "a",
@@ -259,34 +210,23 @@
                     ]
                 },
                 {
-                    "variable": "footer-divider-color",
-                    "name": "分隔线颜色",
-                    "default": "#666",
-                    "used": [
-                        {
-                            "selector": ".am-footer-divider",
-                            "property": "color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "am-footer-text-a",
+                    "variable": "footer-miscs-color",
                     "name": "版权信息颜色",
-                    "default": "#000",
+                    "default": "#999",
                     "used": [
                         {
-                            "selector": ".am-footer-text > a",
+                            "selector": ".am-footer-miscs",
                             "property": "color"
                         }
                     ]
                 },
                 {
-                    "variable": "footer-text-color",
-                    "name": "文本颜色",
-                    "default": "#747474",
+                    "variable": "footer-miscs-link-color",
+                    "name": "版权信息链接颜色",
+                    "default": "#555",
                     "used": [
                         {
-                            "selector": ".am-footer-text",
+                            "selector": ".am-footer-miscs a",
                             "property": "color"
                         }
                     ]
@@ -300,14 +240,6 @@
                             "modal": true,
                             "techSupportCo": "云适配",
                             "techSupportSite": "http://www.yunshipei.com/"
-                        },
-                        "content": {
-                            "owner"     : "云适配",
-                            "companyInfo": [{
-                                "detail" : ""
-                            },{
-                                "detail" : ""
-                            }]
                         }
                     }
                 }

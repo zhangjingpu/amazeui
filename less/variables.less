@@ -34,6 +34,12 @@
 @global-info:         @global-secondary;
 
 
+// One
+// ------------------------------------------------------------------------
+
+@one-primary: #15afef;
+
+
 // body
 // ------------------------------------------------------------------------
 
@@ -134,7 +140,7 @@
 
 // Controls
 // @global-height:									  30px;
-// @global-mini-height:							20px;
+// @global-mini-height:							  20px;
 // @global-small-height:							25px;
 // @global-large-height:							40px;
 
@@ -143,8 +149,15 @@
 // ------------------------------------------------------------------------
 
 @global-border-radius:           2px;
+@global-radius:                  @global-border-radius;
 @border-radius-large:            5px;
 @border-radius-small:            1px;
+
+
+//
+
+@global-rounded:         1000px;
+@global-square:           0;
 
 
 
@@ -218,21 +231,19 @@
 
 @global-z-index:		        1000;
 
-@z-index-navbar:            @global-z-index + 20; // THIS IS WIDGET
+@z-index-topbar-fixed:      @global-z-index;
+@z-index-sticky:            @global-z-index + 10;
+@z-index-dropdown:          @global-z-index + 20;
+@z-index-popover:           @global-z-index + 30;
+@z-index-offcanvas:         @global-z-index + 90;
+@z-index-dimmer:            @global-z-index + 100;
+@z-index-modal:             @global-z-index + 110;
+@z-index-pureview:          @global-z-index + 120;
+@z-index-nprogress:         @global-z-index + 1000;
 
-@z-index-dropdown:          @global-z-index;
-@z-index-popover:           @global-z-index + 10;
-@z-index-tooltip:           @global-z-index + 30;
-@z-index-navbar-fixed:      @global-z-index + 30;
-@z-index-modal-background:  @global-z-index + 40;
-@z-index-modal:             @global-z-index + 50;
-@z-index-paragraph:         @global-z-index + 60;  // THIS IS WIDGET
-@z-index-figure:            @global-z-index + 60;
-@z-index-sticky:            @global-z-index + 19;
-@z-index-mainnav:           @global-z-index + 30;
-
-@z-index-dimmer:            @global-z-index + 20;
-
+@z-index-navbar:            @global-z-index + 10; // THIS IS WIDGET
+@z-index-gotop-fixed:       @global-z-index + 40; // THIS IS WIDGET
+@z-index-menu:              @global-z-index + 50; // THIS IS WIDGET
 
 
 // ========================================================================
@@ -298,29 +309,29 @@
 @btn-line-height:                1.2;
 @btn-font-size:                  @global-font-size;
 
-@btn-default-color:              @gray-dark;
+@btn-default-color:              #444;
 @btn-default-bg:                 #e6e6e6;
-@btn-default-border:             transparent;
+@btn-default-border:             @btn-default-bg;
 
 @btn-primary-color:              #fff;
 @btn-primary-bg:                 @global-primary;
-@btn-primary-border:             darken(@btn-primary-bg, 5%);
+@btn-primary-border:             @btn-primary-bg;
 
 @btn-secondary-color:            #fff;
 @btn-secondary-bg:               @global-secondary;
-@btn-secondary-border:           darken(@btn-secondary-bg, 5%);
+@btn-secondary-border:           @global-secondary;
 
 @btn-success-color:              #fff;
 @btn-success-bg:                 @global-success;
-@btn-success-border:             darken(@btn-success-bg, 5%);
+@btn-success-border:             @global-success;
 
 @btn-warning-color:              #fff;
 @btn-warning-bg:                 @global-warning;
-@btn-warning-border:             darken(@btn-warning-bg, 5%);
+@btn-warning-border:             @btn-warning-bg;
 
 @btn-danger-color:               #fff;
 @btn-danger-bg:                  @global-danger;
-@btn-danger-border:              darken(@btn-danger-bg, 5%);
+@btn-danger-border:              @btn-danger-bg;
 
 @btn-link-disabled-color:        @gray-light;
 
@@ -364,7 +375,7 @@
 @input-color:                    @gray;
 @input-border:                   #ccc;
 @input-border-radius: @global-border-radius;
-@input-border-focus:             @global-primary;
+@input-border-focus:             @global-secondary;
 
 @input-color-placeholder:        @gray-light;
 
@@ -520,7 +531,7 @@
 @comment-list-margin-top:       @global-spacing;
 
 // Highlight color
-@comment-hl-border-color:       lighten(@global-primary, 35%);
+@comment-hl-border-color:       @global-secondary;
 
 
 // ========================================================================
@@ -558,6 +569,7 @@
 @fa-var-ambulance: "\f0f9";
 @fa-var-anchor: "\f13d";
 @fa-var-android: "\f17b";
+@fa-var-angellist: "\f209";
 @fa-var-angle-double-down: "\f103";
 @fa-var-angle-double-left: "\f100";
 @fa-var-angle-double-right: "\f101";
@@ -568,6 +580,7 @@
 @fa-var-angle-up: "\f106";
 @fa-var-apple: "\f179";
 @fa-var-archive: "\f187";
+@fa-var-area-chart: "\f1fe";
 @fa-var-arrow-circle-down: "\f0ab";
 @fa-var-arrow-circle-left: "\f0a8";
 @fa-var-arrow-circle-o-down: "\f01a";
@@ -585,10 +598,12 @@
 @fa-var-arrows-h: "\f07e";
 @fa-var-arrows-v: "\f07d";
 @fa-var-asterisk: "\f069";
+@fa-var-at: "\f1fa";
 @fa-var-automobile: "\f1b9";
 @fa-var-backward: "\f04a";
 @fa-var-ban: "\f05e";
 @fa-var-bank: "\f19c";
+@fa-var-bar-chart: "\f080";
 @fa-var-bar-chart-o: "\f080";
 @fa-var-barcode: "\f02a";
 @fa-var-bars: "\f0c9";
@@ -597,6 +612,11 @@
 @fa-var-behance-square: "\f1b5";
 @fa-var-bell: "\f0f3";
 @fa-var-bell-o: "\f0a2";
+@fa-var-bell-slash: "\f1f6";
+@fa-var-bell-slash-o: "\f1f7";
+@fa-var-bicycle: "\f206";
+@fa-var-binoculars: "\f1e5";
+@fa-var-birthday-cake: "\f1fd";
 @fa-var-bitbucket: "\f171";
 @fa-var-bitbucket-square: "\f172";
 @fa-var-bitcoin: "\f15a";
@@ -613,7 +633,9 @@
 @fa-var-building-o: "\f0f7";
 @fa-var-bullhorn: "\f0a1";
 @fa-var-bullseye: "\f140";
+@fa-var-bus: "\f207";
 @fa-var-cab: "\f1ba";
+@fa-var-calculator: "\f1ec";
 @fa-var-calendar: "\f073";
 @fa-var-calendar-o: "\f133";
 @fa-var-camera: "\f030";
@@ -627,6 +649,13 @@
 @fa-var-caret-square-o-right: "\f152";
 @fa-var-caret-square-o-up: "\f151";
 @fa-var-caret-up: "\f0d8";
+@fa-var-cc: "\f20a";
+@fa-var-cc-amex: "\f1f3";
+@fa-var-cc-discover: "\f1f2";
+@fa-var-cc-mastercard: "\f1f1";
+@fa-var-cc-paypal: "\f1f4";
+@fa-var-cc-stripe: "\f1f5";
+@fa-var-cc-visa: "\f1f0";
 @fa-var-certificate: "\f0a3";
 @fa-var-chain: "\f0c1";
 @fa-var-chain-broken: "\f127";
@@ -650,6 +679,7 @@
 @fa-var-circle-thin: "\f1db";
 @fa-var-clipboard: "\f0ea";
 @fa-var-clock-o: "\f017";
+@fa-var-close: "\f00d";
 @fa-var-cloud: "\f0c2";
 @fa-var-cloud-download: "\f0ed";
 @fa-var-cloud-upload: "\f0ee";
@@ -668,6 +698,7 @@
 @fa-var-compass: "\f14e";
 @fa-var-compress: "\f066";
 @fa-var-copy: "\f0c5";
+@fa-var-copyright: "\f1f9";
 @fa-var-credit-card: "\f09d";
 @fa-var-crop: "\f125";
 @fa-var-crosshairs: "\f05b";
@@ -709,6 +740,7 @@
 @fa-var-external-link-square: "\f14c";
 @fa-var-eye: "\f06e";
 @fa-var-eye-slash: "\f070";
+@fa-var-eyedropper: "\f1fb";
 @fa-var-facebook: "\f09a";
 @fa-var-facebook-square: "\f082";
 @fa-var-fast-backward: "\f049";
@@ -754,6 +786,7 @@
 @fa-var-forward: "\f04e";
 @fa-var-foursquare: "\f180";
 @fa-var-frown-o: "\f119";
+@fa-var-futbol-o: "\f1e3";
 @fa-var-gamepad: "\f11b";
 @fa-var-gavel: "\f0e3";
 @fa-var-gbp: "\f154";
@@ -772,6 +805,7 @@
 @fa-var-google: "\f1a0";
 @fa-var-google-plus: "\f0d5";
 @fa-var-google-plus-square: "\f0d4";
+@fa-var-google-wallet: "\f1ee";
 @fa-var-graduation-cap: "\f19d";
 @fa-var-group: "\f0c0";
 @fa-var-h-square: "\f0fd";
@@ -789,6 +823,7 @@
 @fa-var-home: "\f015";
 @fa-var-hospital-o: "\f0f8";
 @fa-var-html5: "\f13b";
+@fa-var-ils: "\f20b";
 @fa-var-image: "\f03e";
 @fa-var-inbox: "\f01c";
 @fa-var-indent: "\f03c";
@@ -797,6 +832,7 @@
 @fa-var-inr: "\f156";
 @fa-var-instagram: "\f16d";
 @fa-var-institution: "\f19c";
+@fa-var-ioxhost: "\f208";
 @fa-var-italic: "\f033";
 @fa-var-joomla: "\f1aa";
 @fa-var-jpy: "\f157";
@@ -806,15 +842,19 @@
 @fa-var-krw: "\f159";
 @fa-var-language: "\f1ab";
 @fa-var-laptop: "\f109";
+@fa-var-lastfm: "\f202";
+@fa-var-lastfm-square: "\f203";
 @fa-var-leaf: "\f06c";
 @fa-var-legal: "\f0e3";
 @fa-var-lemon-o: "\f094";
 @fa-var-level-down: "\f149";
 @fa-var-level-up: "\f148";
 @fa-var-life-bouy: "\f1cd";
+@fa-var-life-buoy: "\f1cd";
 @fa-var-life-ring: "\f1cd";
 @fa-var-life-saver: "\f1cd";
 @fa-var-lightbulb-o: "\f0eb";
+@fa-var-line-chart: "\f201";
 @fa-var-link: "\f0c1";
 @fa-var-linkedin: "\f0e1";
 @fa-var-linkedin-square: "\f08c";
@@ -837,6 +877,7 @@
 @fa-var-male: "\f183";
 @fa-var-map-marker: "\f041";
 @fa-var-maxcdn: "\f136";
+@fa-var-meanpath: "\f20c";
 @fa-var-medkit: "\f0fa";
 @fa-var-meh-o: "\f11a";
 @fa-var-microphone: "\f130";
@@ -852,9 +893,11 @@
 @fa-var-mortar-board: "\f19d";
 @fa-var-music: "\f001";
 @fa-var-navicon: "\f0c9";
+@fa-var-newspaper-o: "\f1ea";
 @fa-var-openid: "\f19b";
 @fa-var-outdent: "\f03b";
 @fa-var-pagelines: "\f18c";
+@fa-var-paint-brush: "\f1fc";
 @fa-var-paper-plane: "\f1d8";
 @fa-var-paper-plane-o: "\f1d9";
 @fa-var-paperclip: "\f0c6";
@@ -862,6 +905,7 @@
 @fa-var-paste: "\f0ea";
 @fa-var-pause: "\f04c";
 @fa-var-paw: "\f1b0";
+@fa-var-paypal: "\f1ed";
 @fa-var-pencil: "\f040";
 @fa-var-pencil-square: "\f14b";
 @fa-var-pencil-square-o: "\f044";
@@ -869,15 +913,16 @@
 @fa-var-phone-square: "\f098";
 @fa-var-photo: "\f03e";
 @fa-var-picture-o: "\f03e";
+@fa-var-pie-chart: "\f200";
 @fa-var-pied-piper: "\f1a7";
 @fa-var-pied-piper-alt: "\f1a8";
-@fa-var-pied-piper-square: "\f1a7";
 @fa-var-pinterest: "\f0d2";
 @fa-var-pinterest-square: "\f0d3";
 @fa-var-plane: "\f072";
 @fa-var-play: "\f04b";
 @fa-var-play-circle: "\f144";
 @fa-var-play-circle-o: "\f01d";
+@fa-var-plug: "\f1e6";
 @fa-var-plus: "\f067";
 @fa-var-plus-circle: "\f055";
 @fa-var-plus-square: "\f0fe";
@@ -898,6 +943,7 @@
 @fa-var-reddit: "\f1a1";
 @fa-var-reddit-square: "\f1a2";
 @fa-var-refresh: "\f021";
+@fa-var-remove: "\f00d";
 @fa-var-renren: "\f18b";
 @fa-var-reorder: "\f0c9";
 @fa-var-repeat: "\f01e";
@@ -927,6 +973,8 @@
 @fa-var-share-alt-square: "\f1e1";
 @fa-var-share-square: "\f14d";
 @fa-var-share-square-o: "\f045";
+@fa-var-shekel: "\f20b";
+@fa-var-sheqel: "\f20b";
 @fa-var-shield: "\f132";
 @fa-var-shopping-cart: "\f07a";
 @fa-var-sign-in: "\f090";
@@ -936,7 +984,9 @@
 @fa-var-skype: "\f17e";
 @fa-var-slack: "\f198";
 @fa-var-sliders: "\f1de";
+@fa-var-slideshare: "\f1e7";
 @fa-var-smile-o: "\f118";
+@fa-var-soccer-ball-o: "\f1e3";
 @fa-var-sort: "\f0dc";
 @fa-var-sort-alpha-asc: "\f15d";
 @fa-var-sort-alpha-desc: "\f15e";
@@ -1003,17 +1053,22 @@
 @fa-var-tint: "\f043";
 @fa-var-toggle-down: "\f150";
 @fa-var-toggle-left: "\f191";
+@fa-var-toggle-off: "\f204";
+@fa-var-toggle-on: "\f205";
 @fa-var-toggle-right: "\f152";
 @fa-var-toggle-up: "\f151";
+@fa-var-trash: "\f1f8";
 @fa-var-trash-o: "\f014";
 @fa-var-tree: "\f1bb";
 @fa-var-trello: "\f181";
 @fa-var-trophy: "\f091";
 @fa-var-truck: "\f0d1";
 @fa-var-try: "\f195";
+@fa-var-tty: "\f1e4";
 @fa-var-tumblr: "\f173";
 @fa-var-tumblr-square: "\f174";
 @fa-var-turkish-lira: "\f195";
+@fa-var-twitch: "\f1e8";
 @fa-var-twitter: "\f099";
 @fa-var-twitter-square: "\f081";
 @fa-var-umbrella: "\f0e9";
@@ -1041,6 +1096,7 @@
 @fa-var-weibo: "\f18a";
 @fa-var-weixin: "\f1d7";
 @fa-var-wheelchair: "\f193";
+@fa-var-wifi: "\f1eb";
 @fa-var-windows: "\f17a";
 @fa-var-won: "\f159";
 @fa-var-wordpress: "\f19a";
@@ -1048,6 +1104,7 @@
 @fa-var-xing: "\f168";
 @fa-var-xing-square: "\f169";
 @fa-var-yahoo: "\f19e";
+@fa-var-yelp: "\f1e9";
 @fa-var-yen: "\f157";
 @fa-var-youtube: "\f167";
 @fa-var-youtube-play: "\f16a";
@@ -1123,22 +1180,22 @@
 
 @topbar-spacing-vertical:          8px;
 
-@topbar-default-color:             #666;
-@topbar-default-bg:                #f8f8f8;
-@topbar-default-border:            #ddd;
+@topbar-color:             #666;
+@topbar-bg:                #f8f8f8;
+@topbar-border:            #ddd;
 
 // default links
-@topbar-default-link-color:                #666;
-@topbar-default-link-hover-color:          #333;
-@topbar-default-link-active-color:         @global-primary;
-@topbar-default-link-active-bg:            transparent;
-@topbar-default-link-disabled-color:       #ccc;
-@topbar-default-link-disabled-bg:          transparent;
+@topbar-link-color:                #666;
+@topbar-link-hover-color:          #333;
+@topbar-link-active-color:         @global-primary;
+@topbar-link-active-bg:            transparent;
+@topbar-link-disabled-color:       #ccc;
+@topbar-link-disabled-bg:          transparent;
 
 // brand label
-@topbar-default-brand-color:               @topbar-default-link-color;
-@topbar-default-brand-hover-color:         darken(@topbar-default-brand-color, 10%);
-@topbar-default-brand-hover-bg:            transparent;
+@topbar-brand-color:               @topbar-link-color;
+@topbar-brand-hover-color:         darken(@topbar-brand-color, 10%);
+@topbar-brand-hover-bg:            transparent;
 
 
 // Inverted Topbar
@@ -1160,6 +1217,7 @@
 @topbar-inverse-brand-color:               @white;
 @topbar-inverse-brand-hover-color:         @white;
 @topbar-inverse-brand-hover-bg:            transparent;
+
 
 
 
@@ -1205,7 +1263,7 @@
 @panel-primary-text:          #fff;
 
 @panel-secondary-bd:          lighten(@global-secondary, 30%);
-@panel-secondary-hd-bg:       rgba(red(@global-secondary), green(@global-secondary), blue(@global-secondary), .15);;
+@panel-secondary-hd-bg:       rgba(red(@global-secondary), green(@global-secondary), blue(@global-secondary), .15);
 @panel-secondary-text:        darken(@global-secondary, 8%);
 
 @panel-success-bd:            lighten(@global-success, 30%);
@@ -1265,9 +1323,12 @@
 
 
 
-
 // ========================================================================
 // JavaScript Compent
+// ========================================================================
+
+
+// Alert
 // ========================================================================
 
 
@@ -1295,48 +1356,55 @@
 @caret-width-base: 6px;
 
 
+// Modal
+// ========================================================================
 
+@modal-bg-color: #f8f8f8;
+@modal-btn-color : @global-primary;
+@modal-btn-bg: @modal-bg-color;
+@modal-btn-active-bg: #d4d4d4;
+@modal-duration: 300ms;
+@modal-border-color: #dedede;
+@modal-border-radius: @global-border-radius;
 
+@modal-actions-duration: @modal-duration;
+@modal-actions-btn-bg: rgba(243, 243, 243, 0.95);
+@modal-actions-active-btn-bg: #dcdcdc;
 
+@modal-popup-duration: @modal-duration;
+
+@modal-lg:                    900px;
+@modal-md:                    600px;
+@modal-sm:                    300px;
 
 
 // Off-canvas
 // ========================================================================
 
-@offcanvas-z-index:                   (@global-z-index + 10);
-@offcanvas-dimmer-background:                rgba(0,0,0,0.1);
+@offcanvas-dimmer-background:         rgba(0,0,0,0.15);
 @offcanvas-bar-width:                 270px;
 @offcanvas-bar-background:            #333;
 
 
-
-// plugin - modal
+// Popover
 // =======================================================================
 
-//** Padding applied to the modal body
-@modal-inner-padding:         20px;
 
-//** Padding applied to the modal title
-@modal-title-padding:         15px;
-//** Modal title line-height
-@modal-title-line-height:     @line-height-base;
+// Progress
+// ========================================================================
 
-//** Background color of modal content area
-@modal-content-bg:                             #fff;
-//** Modal content border color
-@modal-content-border-color:                   rgba(0,0,0,.2);
-//** Modal content border color **for IE8**
-@modal-content-fallback-border-color:          #999;
 
-//** Modal backdrop background color
-@modal-backdrop-bg:           #000;
-//** Modal backdrop opacity
-@modal-backdrop-opacity:      .5;
-//** Modal header border color
-@modal-header-border-color:   #e5e5e5;
-//** Modal footer border color
-@modal-footer-border-color:   @modal-header-border-color;
+// PureView
+// ========================================================================
 
-@modal-lg:                    900px;
-@modal-md:                    600px;
-@modal-sm:                    300px;
+
+// Share
+// ========================================================================
+
+
+// Tabs
+// ========================================================================
+
+
+// ui.component.less
+// ========================================================================

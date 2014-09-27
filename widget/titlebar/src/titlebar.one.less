@@ -1,92 +1,79 @@
 /**
   * Titlebar Theme: one
-  * Theme ID: one
   */
-@global-body-bg: #f3f3f3;
-
-@global-primary: #15afef;
-
-@global-black: #000;
-
-@global-lighter-gray: rgb(226, 226, 226);
-@global-light-gray: #dfdfdf;
-@global-gray: #dedfe3;
-@global-dark-gray: #888;
-@global-darker-gray: #666;
-
-@global-mask-bg-color: rgba(92,92,92,0.6);
 
 .am-titlebar-one {
 
-  @titlebar-text-color: #15afef;//@global-primary;
-  @titlebar-title-color: #15afef;//@global-primary;
-  @titlebar-left-a-color: #000;
-  @titlebar-bg-color: #fff;
-  @titlebar-title-before: #15afef;//@global-primary;
+  @titlebar-bg: @white;
+  @titlebar-color: @one-primary;
+  @titlebar-title-color: @one-primary;
+  @titlebar-title-link-color: @gray-darker;
+  @titlebar-border-color: @one-primary;
+  @titlebar-nav-link-color: @gray-light;
 
-  @titlebar-right-a-color: #888;
-  margin: 0 10px!important;
-  padding: 0!important;
-  height: 39px!important;
-  line-height: 40px!important;
-  background: @titlebar-bg-color;
+  .flexbox();
+
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 45px;
+  line-height: 44px;
+  background-color: @titlebar-bg;
   overflow: hidden;
-  border-bottom: 1px solid @titlebar-title-before;
+  border-bottom: 1px solid @titlebar-border-color;
 
-  .am-titlebar-left {
-    float: left;
-    padding-left: 5px;
+  .am-titlebar-title {
+    padding-left: 12px;
     position: relative;
-    color: @titlebar-left-a-color;
-    text-indent: 10px;
-    width: 80%;
+    color: @titlebar-title-color;
     .text-overflow();
 
-    &::before{
-      content: '';
-      width: 4px;
-      height: 30px;
+    &:before {
+      content: "";
       position: absolute;
-      left: 5px;
-      top: 5px;
-      background: @titlebar-title-before;
-
+      left: 2px;
+      top: 8px;
+      bottom: 8px;
+      border-left: 3px solid @titlebar-color;
     }
-    img{
-      max-height: 30px;
+
+    a {
+      color: @titlebar-title-link-color;
+    }
+
+    img {
+      height: 24px;
       vertical-align: top;
-      margin-top: 4px;
-    }
-    a{
-      color: @titlebar-left-a-color;
+      margin-top: 10px;
     }
 
-    h1,h2,h3,h4,h5,h6,strong,em{
+    h1, h2, h3, h4, h5, h6, strong, em {
       font-style: normal;
       font-weight: normal;
       margin-bottom: 0;
     }
 
-    ul,li{
+    ul,
+    li {
       list-style: none;
       padding-left: 0;
     }
-
-
   }
 
-  .am-titlebar-right {
-    float: right;
+  .am-titlebar-nav {
+    .flex();
+    text-align: right;
+
     padding-right: 5px;
-    color: @titlebar-right-a-color;
+    color: @titlebar-nav-link-color;
     font-size: 1.4rem;
 
-    a{
-      color: @titlebar-right-a-color;
+    a {
+      color: @titlebar-nav-link-color;
     }
   }
 
   .hook-am-titlebar-one;
 }
 
-.hook-am-titlebar-one() {}
+.hook-am-titlebar-one() {
+}

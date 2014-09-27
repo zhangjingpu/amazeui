@@ -1,9 +1,8 @@
 define(function(require, exports, module) {
-
     require('core');
 
     // add2home
-    require('ui.add2home');
+    var addToHS = require('ui.add2home');
 
     var cookie = require('util.cookie'),
         modal = require('ui.modal'),
@@ -11,8 +10,10 @@ define(function(require, exports, module) {
         footerInit = function() {
             // modal mode
             $('.am-footer-ysp').on('click', function() {
-                $('#am-switch-mode').modal();
+                $('#am-footer-mode').modal();
             });
+
+            addToHS();
 
             // switch mode
             // switch to desktop

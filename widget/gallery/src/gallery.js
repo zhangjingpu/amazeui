@@ -1,25 +1,34 @@
-define(function (require, exports, module) {
+define(function(require, exports, module) {
+    require('core');
 
-    var touchGallery = require('zepto.touchgallery');
+    var PureView = require('ui.pureview');
 
-    var $ = window.Zepto;
+    var $ = window.Zepto,
+        UI = $.AMUI;
 
     var galleryInit = function() {
-        var $themeOne = $('.am-gallery-one');
+        var $gallery = $('[data-am-widget="gallery"]'),
+            $galleryOne = $gallery.filter('.am-gallery-one');
 
-        $('[data-am-gallery] a').touchTouch();
+        $gallery.each(function() {
+            var options = UI.utils.parseOptions($(this).attr('data-am-gallery'));
+            
+            if (options.pureview) {
+                (typeof options.pureview === 'object') ? $(this).pureview(options.pureview) : $(this).pureview();
+            }
+        });
 
-        $themeOne.each(function() {
+        $galleryOne.each(function() {
             galleryMore($(this));
         });
     };
 
     function galleryMore(object) {
-        var moreData = $('<li class=\'am-gallery-more\'><a href=\'javascript:;\' class=\'am-btn am-btn-default\'>更多 &gt;&gt;</a></li>');
+        var moreData = $('<li class=\'am-gallery-more\'><a href=\'javascript:;\'>更多 &gt;&gt;</a></li>');
 
         if (object.children().length > 6) {
 
-            object.children().each(function (index) {
+            object.children().each(function(index) {
                 if (index > 5) {
                     $(this).hide();
                 }
@@ -29,16 +38,15 @@ define(function (require, exports, module) {
             object.append(moreData);
         }
 
-        $('.am-gallery-more').on('click', function() {
+        object.find('.am-gallery-more').on('click', function() {
             object.children().show();
             $(this).hide();
         });
     }
 
-    $(function () {
+    $(function() {
         galleryInit();
     });
 
     exports.init = galleryInit;
-
 });

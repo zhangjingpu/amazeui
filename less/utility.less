@@ -2,12 +2,12 @@
 // Description:                 Useful utility classes
 //
 // Component:
-//                                        `am-cf`
-//                                        `am-f*`
-//                                        `am-vertical-align`
-//                                        `am-display-*`
-//                                        `am-visible-*`
-//                                        `am-hidden-*`
+//                              `am-cf`
+//                              `am-f*`
+//                              `am-vertical-align`
+//                              `am-display-*`
+//                              `am-visible-*`
+//                              `am-hidden-*`
 //
 // ==========================================================================
 
@@ -146,19 +146,19 @@
     @{type}@{dimension}: @global-margin;
   }
 
-  .am-margin@{dimension}-xs {
+  .am-@{type}@{dimension}-xs {
     @{type}@{dimension}: @global-margin-xs;
   }
 
-  .am-margin@{dimension}-sm {
+  .am-@{type}@{dimension}-sm {
     @{type}@{dimension}: @global-margin-sm;
   }
 
-  .am-margin@{dimension}-lg {
+  .am-@{type}@{dimension}-lg {
     @{type}@{dimension}: @global-margin-lg;
   }
 
-  .am-margin@{dimension}-xl {
+  .am-@{type}@{dimension}-xl {
     @{type}@{dimension}: @global-margin-xl;
   }
 }
@@ -206,7 +206,7 @@
     @{type}@{dimension2}: @global-margin-lg;
   }
 
-  .am-margin@{dimension}-xl {
+  .am-@{type}@{dimension}-xl {
     @{type}@{dimension1}: @global-margin-xl;
     @{type}@{dimension2}: @global-margin-xl;
   }
@@ -642,4 +642,122 @@
 
 .am-text-bottom {
   vertical-align: bottom !important;
+}
+
+
+// angle
+// ========================================================================
+
+.angle-base() {
+  &:before,
+  &:after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border: 8px dashed transparent;
+    z-index: 1;
+  }
+}
+
+.am-angle {
+  position: absolute;
+  .angle-base;
+}
+
+.angle-up-variant(@border-color: #ddd; @bg-color: #fff; @border-width: 8px) {
+  &:before,
+  &:after {
+    border-bottom-style: solid;
+    border-width: 0 @border-width @border-width;
+  }
+
+  &:before {
+    border-bottom-color: @border-color;
+    bottom: 0;
+  }
+
+  &:after {
+    border-bottom-color: @bg-color;
+    bottom: -1px;
+  }
+}
+
+.am-angle-up {
+  top: 0;
+  .angle-up-variant();
+}
+
+.angle-down-variant(@border-color: #ddd; @bg-color: #fff; @border-width: 8px) {
+  bottom: -(@border-width + 1);
+
+  &:before,
+  &:after {
+    border-top-style: solid;
+    border-width: @border-width @border-width 0;
+  }
+
+  &:before {
+    border-top-color: @border-color;
+    bottom: 0;
+  }
+
+  &:after {
+    border-top-color: @bg-color;
+    bottom: 1px;
+  }
+}
+
+.am-angle-down {
+  .angle-down-variant();
+}
+
+.angle-left-variant(@border-color: #ddd; @bg-color: #fff; @border-width: 8px) {
+  left: -(@border-width + 1);
+
+  &:before,
+  &:after {
+    border-right-style: solid;
+    border-width: @border-width @border-width @border-width 0;
+  }
+
+  &:before {
+    border-right-color: @border-color;
+    left: 0;
+  }
+
+  &:after {
+    border-right-color: @bg-color;
+    left: 1px;
+  }
+}
+
+.am-angle-left {
+  .angle-left-variant();
+}
+
+.angle-right-variant(@border-color: #ddd; @bg-color: #fff; @border-width: 8px) {
+  right: 0;
+
+  &:before,
+  &:after {
+    border-left-style: solid;
+    border-width: @border-width 0 @border-width @border-width;
+  }
+
+  &:before {
+    border-left-color: @border-color;
+    left: 0;
+  }
+
+  &:after {
+    border-left-color: @bg-color;
+    left: -1px;
+  }
+}
+
+
+.am-angle-right {
+  .angle-right-variant();
 }

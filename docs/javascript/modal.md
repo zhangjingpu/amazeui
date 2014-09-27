@@ -91,18 +91,16 @@ Modal 交互窗口，可以用来模拟浏览器的 `alert`、`confirm`、`promp
 </div>
 
 <script>
-seajs.use(['ui.modal'], function() {
-  Zepto(function($) {
-    $('#doc-confirm-toggle').on('click', function() {
-      $('#my-confirm').modal({
-        relatedElement: this,
-        onConfirm: function() {
-          alert('你是猴子派来的逗比!')
-        },
-        onCancel: function() {
-          alert('你不确定是不是猴子派来的逗比!')
-        }
-      });
+$(function() {
+  $('#doc-confirm-toggle').on('click', function() {
+    $('#my-confirm').modal({
+      relatedElement: this,
+      onConfirm: function() {
+        alert('你是猴子派来的逗比!')
+      },
+      onCancel: function() {
+        alert('你不确定是不是猴子派来的逗比!')
+      }
     });
   });
 });
@@ -125,7 +123,7 @@ seajs.use(['ui.modal'], function() {
 </div>
 ```
 ```javascript
-Zepto(function($) {
+$(function() {
   $('#doc-confirm-toggle').on('click', function() {
     $('#my-confirm').modal({
       relatedElement: this,
@@ -159,21 +157,19 @@ Zepto(function($) {
   </div>
 </div>
 <script>
-  seajs.use(['ui.modal'], function() {
-    Zepto(function($) {
-      $('#doc-prompt-toggle').on('click', function() {
-        $('#my-prompt').modal({
-          relatedElement: this,
-          onConfirm: function(data) {
-            alert('你输入的是：' + data)
-          },
-          onCancel: function() {
-            alert('不想说!');
-          }
-        });
-      });
+$(function() {
+  $('#doc-prompt-toggle').on('click', function() {
+    $('#my-prompt').modal({
+      relatedElement: this,
+      onConfirm: function(data) {
+        alert('你输入的是：' + data)
+      },
+      onCancel: function() {
+        alert('不想说!');
+      }
     });
   });
+});
 </script>
 `````
 ```html
@@ -194,7 +190,7 @@ Zepto(function($) {
 </div>
 ```
 ```javascript
-Zepto(function($) {
+$(function() {
   $('#doc-prompt-toggle').on('click', function() {
     $('#my-prompt').modal({
       relatedElement: this,
@@ -365,6 +361,16 @@ $('#myModal').modal(options);
 - `.modal('close')` - 关闭 Modal 窗口
 
 #### 自定义事件
+
+自定义事件在弹窗上触发，可以监听弹窗元素来执行其他操作。
+
+```javascript
+$('#doc-modal-1').on('open:modal:amui', function(){
+  console.log('第一个演示弹窗打开了');
+});
+```
+
+拷贝上面的代码粘贴到控制台执行，然后每次打开第一个演示弹窗（标题 `1.1` 下面的），控制台都会输出那行文字。
 
 <table class="am-table am-table-bd am-table-striped">
   <thead>

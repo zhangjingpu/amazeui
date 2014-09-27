@@ -1,6 +1,4 @@
-@nprogress-bar-color: @global-primary;
-
-//TODO: set z-index variable
+@nprogress-bar-color: @global-success;
 
 #nprogress {
   /* Make clicks pass-through */
@@ -10,7 +8,7 @@
     background: @nprogress-bar-color;
 
     position: fixed;
-    z-index: 1031;
+    z-index: @z-index-nprogress;
     top: 0;
     left: 0;
 
@@ -37,7 +35,7 @@
   .nprogress-spinner {
     display: block;
     position: fixed;
-    z-index: 1031;
+    z-index: @z-index-nprogress;
     top: 15px;
     right: 15px;
   }

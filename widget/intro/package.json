@@ -1,7 +1,7 @@
 {
     "name": "intro",
 
-    "version": "2.0.0",
+    "version": "3.0.0",
 
     "localName": {
         "en": "Intro",
@@ -37,9 +37,18 @@
 
     "style": "intro.less",
 
+    "demoContent": {
+        "title": "你好小娜",
+        "more": {
+            "link": "#more",
+            "title": "更多细节"
+        },
+        "left": "<img src=\"http://i.static.amazeui.org/assets/i/cpts/intro/WP_Cortana_China.png\" alt=\"小娜\" />",
+        "right": "<p>Cortana 恐怕是用户急于更新到 WP8.1 Update 开发者预览版的原因之一</p><p>Cortana 中国版特有的新图标（面团，带眼睛，可在 Cortana 设置中切换回圆圈），使用的是中文语言，也同样支持 Cortana 笔记本。</p>"
+    },
+
     "themes": [
         {
-            "id": "default",
             "name": "default",
             "desc": "默认",
             "options": {
@@ -50,151 +59,63 @@
             "hook": "hook-am-intro-default",
             "variables": [
                 {
-                    "variable": "intro-bg-color",
-                    "name": "背景颜色",
-                    "default": "#428bca",
+                    "variable": "intro-hd-bg",
+                    "name": "标题背景色",
+                    "default": "#0e90d2",
                     "used": [
                         {
-                            "selector": "",
+                            "selector": ".am-intro-hd",
                             "property": "background-color"
                         }
                     ]
                 },
                 {
-                    "variable": "intro-text-color",
-                    "name": "文本颜色",
-                    "default": "#ffffff",
+                    "variable": "intro-hd-color",
+                    "name": "标题文本颜色",
+                    "default": "#fff",
                     "used": [
                         {
-                            "selector": "",
+                            "selector": ".am-intro-title",
                             "property": "color"
                         }
                     ]
                 },
                 {
-                    "variable": "intro-a-color",
+                    "variable": "intro-hd-link-color",
                     "name": "More链接颜色",
-                    "default": "#ffffff",
+                    "default": "#eee",
                     "used": [
                         {
-                            "selector": ".am-intro-top a",
+                            "selector": ".am-intro-hd a",
                             "property": "color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "intro-border-color",
-                    "name": "More边框颜色",
-                    "default": "#cccccc",
-                    "used": [
-                        {
-                            "selector": ".am-intro-more-bottom a",
-                            "property": "border-color"
                         }
                     ]
                 }
             ],
             "demos": [
                 {
-                    "desc": "",
+                    "desc": "More 在上",
                     "data": {
                         "options": {
                             "leftCols": 5,
                             "rightCols": 7,
                             "position": "top"
-                        },
-                        "content": {
-                            "top": "栏目标题",
-                            "more": "<a href=\"#\">More »</a>",
-                            "left": "<img src=\"http://upload.wikimedia.org/wikipedia/zh/0/0c/GraceHopper.jpg\" alt=\"Grace\" />",
-                            "right": "<p>葛丽丝·穆雷·霍普，生于美国纽约州纽约市，美国海军准将及计算机科学家，世界最早一批的程式设计师之一，也是最早的女性程式设计师之一。</p>"
+                        }
+                    }
+                },
+                {
+                    "desc": "More 在下",
+                    "data": {
+                        "options": {
+                            "leftCols": 5,
+                            "rightCols": 7,
+                            "position": "bottom"
                         }
                     }
                 }
             ]
         },
         {
-            "id": "clear",
-            "name": "clear",
-            "desc": "ios7默认",
-            "options": {
-                "leftCols": "5",
-                "rightCols": "7",
-                "position": "top"
-            },
-            "hook": "hook-am-intro-clear",
-            "variables": [
-                {
-                    "variable": "intro-bg-color",
-                    "name": "背景颜色",
-                    "default": "#fff",
-                    "used": [
-                        {
-                            "selector": "",
-                            "property": "background-color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "intro-text-color",
-                    "name": "文本颜色",
-                    "default": "#333",
-                    "used": [
-                        {
-                            "selector": "",
-                            "property": "color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "intro-a-color",
-                    "name": "链接颜色",
-                    "default": "#007aff",
-                    "used": [
-                        {
-                            "selector": ".am-intro-top a",
-                            "property": "color"
-                        },
-                        {
-                            "selector": ".am-intro-right a",
-                            "property": "color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "intro-top-before-bg-color",
-                    "name": "标题小方块颜色",
-                    "default": "#007aff",
-                    "used": [
-                        {
-                            "selector": ".am-intro-top::before",
-                            "property": "background-color"
-                        }
-                    ]
-                }
-            ],
-            "demos": [
-                {
-                    "desc": "",
-                    "data": {
-                        "options": {
-                            "leftCols": 5,
-                            "rightCols": 7,
-                            "position": "top"
-                        },
-                        "content": {
-                            "top": "栏目标题",
-                            "more": "<a href=\"#\">查看详情</a>",
-                            "left": "<img src=\"http://img4.duitang.com/uploads/item/201402/21/20140221160659_rdrHJ.thumb.600_0.jpeg\" alt=\"冰雪奇缘\" />",
-                            "right": "<p>冰雪奇缘（英语：Frozen）是2013年一部美国3D电脑动画电影。电影由华特<a href=\"##\">迪士尼动画</a>工作室制作，并由华特迪士尼工作室电影公司发行。这部影片由克里斯·巴克和詹妮弗·李导演，并由克里斯汀·贝尔、伊迪娜·门泽尔、<a href=\"##\">乔纳森·格罗夫</a>等配音。</p>"
-                        }
-                    }
-                }
-            ],
-            "hidden": 1
-        },
-        {
-            "id": "one",
             "name": "one",
             "desc": "简约风格",
             "options": {
@@ -205,34 +126,49 @@
             "hook": "hook-am-intro-one",
             "variables": [
                 {
-                    "variable": "intro-text-color",
+                    "variable": "intro-title-color",
                     "name": "标题颜色",
-                    "default": "#222",
+                    "default": "#333",
                     "used": [
                         {
-                            "selector": ".am-intro-top",
+                            "selector": ".am-intro-title",
                             "property": "color"
                         }
                     ]
                 },
                 {
-                    "variable": "intro-right-text-color",
-                    "name": "文本颜色",
-                    "default": "#222",
+                    "variable": "intro-link-color",
+                    "name": "链接颜色",
+                    "default": "#15afef",
                     "used": [
                         {
-                            "selector": ".am-intro-right",
+                            "selector": "a",
                             "property": "color"
                         }
                     ]
                 },
                 {
-                    "variable": "intro-a-color",
-                    "name": "MORE链接颜色",
-                    "default": "#fff",
+                    "variable": "intro-hd-border-color",
+                    "name": "边框颜色",
+                    "default": "#15afef",
                     "used": [
                         {
-                            "selector": ".am-intro-more > a",
+                            "selector": ".am-intro-hd",
+                            "property": "border-bottom-color"
+                        },
+                        {
+                            "selector": ".am-intro-title:before",
+                            "property": "background-color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "intro-content-color",
+                    "name": "内容颜色",
+                    "default": "#555",
+                    "used": [
+                        {
+                            "selector": ".am-intro-bd",
                             "property": "color"
                         }
                     ]
@@ -245,13 +181,7 @@
                         "options": {
                             "leftCols": 5,
                             "rightCols": 7,
-                            "position": "bottom"
-                        },
-                        "content": {
-                            "top" : "栏目标题",
-                            "more" : "<a href=\"#\">查看详情</a>",
-                            "left": "<img src=\"http://upload.wikimedia.org/wikipedia/zh/0/0c/GraceHopper.jpg\" alt=\"Grace\" />",
-                            "right": "<p>葛丽丝·穆雷·霍普，生于美国纽约州纽约市，美国海军准将及计算机科学家，世界最早一批的程式设计师之一，也是最早的女性程式设计师之一。</p>"
+                            "position": "top"
                         }
                     }
                 }
@@ -451,7 +381,7 @@
 
     "readme": "http://docs.yunshipei.com/amui/#intro",
 
-    "example": "/*\n 此模块的使用方法：采集原PC网站上的图片数据以及标题内容放到此模块。\n \n 常用用途：通常用来采集一些有单张图片以及图片注释文字的简介介绍等。\n \n 了解AMUI的模块详情，请访问http://ide.yunshipei.com/doc/amui/#intro。\n\n 示例代码：\n\n         var data = [];\n         $(\".listpart\").eq(1).find(\"li\").each(function(){\n             data.push({\n                 \"top\": $(this).find(\".news-pic\").find(\"img\").src(),  \n                 \"more\": \"more\", \n                 \"left\": $(this).find(\".headline\").find(\"a\").text(),\n                 \"right\":  $(this).find(\".headline\").find(\"img\").outerHTML()  \n             });\n         });\n         return data;\n*/\n\nvar data = {\n    \"top\": \"\",  // 标题\n    \"more\": \"\", // 更多链接（支持html标签）\n    \"left\": \"\", //左边的内容\n    \"right\": \"\" //右边的内容\n};\nreturn data;\n",
+    "example": "/*\n\n 此模块的使用方法：采集原PC网站上的图片数据以及标题内容放到此模块。\n\n 常用用途：简介组件，常用于放置包含图片和文字的企业介绍信息等。\n\n 了解Amaze UI的模块详情，请访问http://amazeui.org/widgets/intro。\n\n 示例代码：\n\n         var data = {\n\n            \"title\": $(\".listpart\").find(\".headline\").text(),\n\n            \"more\": {\n              \"link\": \"#more\",\n              \"title\": \"更多细节\"\n            },\n\n            \"left\": $(\".listpart\").find(\".news-pic\").find(\"img\").src(),\n\n            \"right\": $(\".listpart\").find(\".headline\").find(\"img\").outerHTML()\n        };\n\n        return data;\n\n*/\n\n\nvar data = {\n  \"title\": \"\",  // 标题\n\n  \"more\": { // 更多链接\n    \"title\": \"\",\n    \"link\": \"\"\n  },\n\n  \"left\": \"\", //左边的内容, 可以写html\n\n  \"right\": \"\" //右边的内容, 可以写html\n\n};\n\nreturn data;\n",
 
     "hidden": false
 }

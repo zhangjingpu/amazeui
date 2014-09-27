@@ -12,18 +12,30 @@ define(function(require, exports, module) {
         $body = $('body'),
         supportTransition = UI.support.transition;
 
+    /**
+     * @reference https://github.com/nolimits4web/Framework7/blob/master/src/js/modals.js
+     * @license https://github.com/nolimits4web/Framework7/blob/master/LICENSE
+     */
+
     var Modal = function(element, options) {
         this.options = $.extend({}, Modal.DEFAULTS, options || {});
         this.$element = $(element);
+
+        if (!this.$element.attr('id')) {
+            this.$element.attr('id', UI.utils.generateGUID('am-modal'))
+        }
+
         this.isPopup = this.$element.hasClass('am-popup');
         this.active = this.transitioning = null;
 
         this.events();
     };
 
-
-    // Set template tabindex to tigger onfocus on div
     Modal.DEFAULTS = {
+        className: {
+            active: 'am-modal-active',
+            out: 'am-modal-out'
+        },
         selector: {
             modal: '.am-modal',
             active: '.am-modal-active'
@@ -32,7 +44,8 @@ define(function(require, exports, module) {
         onConfirm: function() {
         },
         onCancel: function() {
-        }
+        },
+        duration: 300 // must equal the CSS transition duration
     };
 
     Modal.prototype.toggle = function(relatedElement) {
@@ -41,6 +54,7 @@ define(function(require, exports, module) {
 
     Modal.prototype.open = function(relatedElement) {
         var $element = this.$element,
+            options = this.options,
             isPopup = this.isPopup;
 
         if (this.transitioning || this.active) return;
@@ -53,17 +67,13 @@ define(function(require, exports, module) {
 
         $element.trigger($.Event('open:modal:amui', {relatedElement: relatedElement}));
 
-        // trigger reflow;
-        var clientLeft = $element[0].clientLeft;
+        dimmer.open($element);
 
-        dimmer.open();
+        $element.show().redraw();
 
-        $element.show();
+        !isPopup && $element.css({marginTop: - parseInt($element.height() / 2, 10) + 'px'});
 
-        !isPopup && $element.redraw()
-            .css({marginTop: -$element.height() / 2 + 'px'})
-
-        $element.removeClass('am-modal-out').addClass('am-modal-active');
+        $element.removeClass(options.className.out).addClass(options.className.active);
 
         this.transitioning = 1;
 
@@ -74,13 +84,14 @@ define(function(require, exports, module) {
 
         if (!supportTransition) return complete.call(this);
 
-        $element.one(supportTransition.end, $.proxy(complete, this));
+        $element.one(supportTransition.end, $.proxy(complete, this)).emulateTransitionEnd(options.duration);
     };
 
     Modal.prototype.close = function(relatedElement) {
         if (this.transitioning || !this.active) return;
 
         var $element = this.$element,
+            options = this.options,
             isPopup = this.isPopup,
             that = this;
 
@@ -89,22 +100,21 @@ define(function(require, exports, module) {
         this.transitioning = 1;
 
         var complete = function() {
-            $element.trigger('closed.amui.modal');
-            isPopup && $element.removeClass('am-modal-out');
+            $element.trigger('closed:amui:modal');
+            isPopup && $element.removeClass(options.className.out);
             $element.hide();
             this.transitioning = 0;
         };
 
-        $element.removeClass('am-modal-active').addClass('am-modal-out');
+        $element.removeClass(options.className.active).addClass(options.className.out);
 
         if (!supportTransition) return complete.call(this);
 
-        $element.one(supportTransition.end, $.proxy(complete, this));
+        $element
+            .one(supportTransition.end, $.proxy(complete, this))
+            .emulateTransitionEnd(options.duration);
 
-        // hide dimmer when all modal is closed
-        if (!$body.find(Modal.DEFAULTS.selector.active).length) {
-            dimmer.close();
-        }
+        dimmer.close($element);
 
         this.active = false;
     };
@@ -181,5 +191,3 @@ define(function(require, exports, module) {
 
     module.exports = Modal;
 });
-
-// TODO: parse tpl?

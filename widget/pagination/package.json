@@ -1,7 +1,7 @@
 {
     "name": "pagination",
 
-    "version": "2.0.0",
+    "version": "3.0.0",
 
     "localName": {
         "en": "Pagination",
@@ -15,7 +15,7 @@
         "email": "china_victory@yunshipei.com"
     },
 
-    "description": "分页模块",
+    "description": "分页组件",
 
     "poweredBy": "AllMobilize",
 
@@ -39,17 +39,16 @@
 
     "themes": [
         {
-            "id": "default",
             "name": "default",
-            "desc": "扁平数字按钮",
+            "desc": "扁平按钮",
             "options": {
                 "select": false
             },
             "hook": "hook-am-pagination-default",
             "variables": [
                 {
-                    "variable": "pagination-a-bg-color",
-                    "name": "页码背景颜色",
+                    "variable": "pagination-link-bg",
+                    "name": "页码背景色",
                     "default": "#eee",
                     "used": [
                         {
@@ -59,8 +58,8 @@
                     ]
                 },
                 {
-                    "variable": "pagination-a-text-color",
-                    "name": "页码文本颜色",
+                    "variable": "pagination-link-color",
+                    "name": "页码颜色",
                     "default": "#222",
                     "used": [
                         {
@@ -70,31 +69,27 @@
                     ]
                 },
                 {
-                    "variable": "pagination-active-bg-color",
-                    "name": "活动链接背景颜色",
-                    "default": "#428bca",
+                    "variable": "pagination-active-bg",
+                    "name": "激活链接背景色",
+                    "default": "#0e90d2",
                     "used": [
                         {
-                            "selector": "li.active a",
+                            "selector": ">.am-active>a, >.am-active>span, >.am-active>a:hover, >.am-active>span:hover, >.am-active>a:focus, >.am-active>span:focus",
                             "property": "background-color"
                         },
                         {
-                            "selector": "li:hover a",
-                            "property": "background-color"
+                            "selector": ">.am-active>a, >.am-active>span, >.am-active>a:hover, >.am-active>span:hover, >.am-active>a:focus, >.am-active>span:focus",
+                            "property": "border-color"
                         }
                     ]
                 },
                 {
-                    "variable": "pagination-active-text-color",
+                    "variable": "pagination-active-color",
                     "name": "活动链接文本颜色",
-                    "default": "#ffffff",
+                    "default": "#fff",
                     "used": [
                         {
-                            "selector": "li.active a",
-                            "property": "color"
-                        },
-                        {
-                            "selector": "li:hover a",
+                            "selector": ">.am-active>a, >.am-active>span, >.am-active>a:hover, >.am-active>span:hover, >.am-active>a:focus, >.am-active>span:focus",
                             "property": "color"
                         }
                     ]
@@ -120,7 +115,7 @@
                                 {
                                     "title": "2",
                                     "link": "#",
-                                    "class": "active"
+                                    "className": "am-active"
                                 },
                                 {
                                     "title": "3",
@@ -141,104 +136,20 @@
             ]
         },
         {
-            "id": "d2",
-            "name": "d2",
-            "desc": "上下页+数字",
-            "options": {
-                "select": false
-            },
-            "hook": "hook-am-pagination-d2",
-            "variables": [
-                {
-                    "variable": "pagination-a-bg-color",
-                    "name": "页码背景颜色",
-                    "default": "#DFE2EA",
-                    "used": [
-                        {
-                            "selector": "li a",
-                            "property": "background-color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "pagination-a-text-color",
-                    "name": "页码文本颜色",
-                    "default": "#656F7E",
-                    "used": [
-                        {
-                            "selector": "li a",
-                            "property": "color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "pagination-active-bg-color",
-                    "name": "活动链接背景颜色",
-                    "default": "#3276B1",
-                    "used": [
-                        {
-                            "selector": "li.active a",
-                            "property": "background-color"
-                        },
-                        {
-                            "selector": "li:hover a",
-                            "property": "background-color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "pagination-active-text-color",
-                    "name": "活动链接文本颜色",
-                    "default": "#ffffff",
-                    "used": [
-                        {
-                            "selector": "li.active a",
-                            "property": "color"
-                        },
-                        {
-                            "selector": "li:hover a",
-                            "property": "color"
-                        }
-                    ]
-                }
-            ],
-            "demos": [
-                {
-                    "data": {
-                        "content": {
-                            "prevTitle": "上一页",
-                            "prevLink": "#",
-                            "nextTitle": "下一页",
-                            "nextLink": "#",
-                            "total": "5",
-                            "page": [
-                                {
-                                    "title": "2",
-                                    "link": "#",
-                                    "class": "active"
-                                }
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "id": "t1",
-            "name": "pop",
-            "desc": "上下页+数字选择",
+            "name": "select",
+            "desc": "上下页+选择框",
             "options": {
                 "select": true
             },
-            "hook": "hook-am-pagination-pop",
+            "hook": "hook-am-pagination-select",
             "variables": [
                 {
-                    "variable": "pagination-a-bg-color",
-                    "name": "页码背景颜色",
-                    "default": "#DFE2EA",
+                    "variable": "pagination-link-bg",
+                    "name": "页码背景色",
+                    "default": "#eee",
                     "used": [
                         {
-                            "selector": "li a",
+                            "selector": ">li>a",
                             "property": "background-color"
                         },
                         {
@@ -248,12 +159,12 @@
                     ]
                 },
                 {
-                    "variable": "pagination-a-text-color",
-                    "name": "页码文本颜色",
-                    "default": "#656F7E",
+                    "variable": "pagination-link-color",
+                    "name": "页码颜色",
+                    "default": "#555",
                     "used": [
                         {
-                            "selector": "li a",
+                            "selector": "> li > a",
                             "property": "color"
                         },
                         {
@@ -266,9 +177,6 @@
             "demos": [
                 {
                     "data": {
-                        "options": {
-                            "select": true
-                        },
                         "content": {
                             "prevTitle": "上一页",
                             "prevLink": "#",
@@ -295,248 +203,6 @@
             ]
         },
         {
-            "id": "t2",
-            "name": "slide",
-            "desc": "上下页+数字选择2",
-            "options": {
-                "select": true
-            },
-            "hook": "hook-am-pagination-slide",
-            "variables": [
-                {
-                    "variable": "pagination-a-bg-color",
-                    "name": "页码背景颜色",
-                    "default": "#DFE2EA",
-                    "used": [
-                        {
-                            "selector": "li a",
-                            "property": "background-color"
-                        },
-                        {
-                            "selector": ".am-pagination-select select",
-                            "property": "background-color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "pagination-a-text-color",
-                    "name": "页码文本颜色",
-                    "default": "#656F7E",
-                    "used": [
-                        {
-                            "selector": "li a",
-                            "property": "color"
-                        },
-                        {
-                            "selector": ".am-pagination-select select",
-                            "property": "color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "pagination-active-bg-color",
-                    "name": "活动链接背景颜色",
-                    "default": "#3276B1",
-                    "used": [
-                        {
-                            "selector": "li.active a",
-                            "property": "background-color"
-                        },
-                        {
-                            "selector": "li:hover a",
-                            "property": "background-color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "pagination-active-text-color",
-                    "name": "活动链接文本颜色",
-                    "default": "#FFFFFF",
-                    "used": [
-                        {
-                            "selector": "li.active a",
-                            "property": "color"
-                        },
-                        {
-                            "selector": "li:hover a",
-                            "property": "color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "pagination-border-color",
-                    "name": "边框颜色",
-                    "default": "#6F6A6A",
-                    "used": [
-                        {
-                            "selector": ".am-pagination-select:after",
-                            "property": "border-right-color"
-                        },
-                        {
-                            "selector": ".am-pagination-select:after",
-                            "property": "border-bottom-color"
-                        }
-                    ]
-                }
-            ],
-            "demos": [
-                {
-                    "data": {
-                        "options": {
-                            "select": true
-                        },
-                        "content": {
-                            "prevTitle": "上一页",
-                            "prevLink": "#",
-                            "nextTitle": "下一页",
-                            "nextLink": "#",
-                            "page": [
-                                {
-                                    "title": "1",
-                                    "link": "#"
-                                },
-                                {
-                                    "title": "2",
-                                    "link": "#",
-                                    "class": "active"
-                                },
-                                {
-                                    "title": "3",
-                                    "link": "#"
-                                },
-                                {
-                                    "title": "4",
-                                    "link": "#"
-                                },
-                                {
-                                    "title": "5",
-                                    "link": "#"
-                                }
-                            ]
-                        }
-                    }
-                }
-            ]
-        },
-        {
-            "id": "clear",
-            "name": "clear",
-            "desc": "ios7默认",
-            "options": {
-                "select": true
-            },
-            "hook": "hook-am-pagination-clear",
-            "variables": [
-                {
-                    "variable": "pagination-a-bg-color",
-                    "name": "页码背景颜色",
-                    "default": "#DFE2EA",
-                    "used": [
-                        {
-                            "selector": "li a",
-                            "property": "background-color"
-                        },
-                        {
-                            "selector": ".am-pagination-select select",
-                            "property": "background-color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "pagination-a-text-color",
-                    "name": "页码文本颜色",
-                    "default": "#656F7E",
-                    "used": [
-                        {
-                            "selector": "li a",
-                            "property": "color"
-                        },
-                        {
-                            "selector": ".am-pagination-select select",
-                            "property": "color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "pagination-active-bg-color",
-                    "name": "活动链接背景颜色",
-                    "default": "#3276B1",
-                    "used": [
-                        {
-                            "selector": "li.active a",
-                            "property": "background-color"
-                        },
-                        {
-                            "selector": "li:hover a",
-                            "property": "background-color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "pagination-active-text-color",
-                    "name": "活动链接文本颜色",
-                    "default": "#FFFFFF",
-                    "used": [
-                        {
-                            "selector": "li.active a",
-                            "property": "color"
-                        },
-                        {
-                            "selector": "li:hover a",
-                            "property": "color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "pagination-border-color",
-                    "name": "边框颜色",
-                    "default": "#6F6A6A",
-                    "used": [
-                        {
-                            "selector": ".am-pagination-select:after",
-                            "property": "border-right-color"
-                        },
-                        {
-                            "selector": ".am-pagination-select:after",
-                            "property": "border-bottom-color"
-                        }
-                    ]
-                }
-            ],
-            "demos": [
-                {
-                    "data": {
-                        "options": {
-                            "select": true
-                        },
-                        "content": {
-                            "prevTitle": "<",
-                            "prevLink": "#",
-                            "nextTitle": ">",
-                            "nextLink": "#",
-                            "page": [
-                                {
-                                    "title": "1",
-                                    "link": "#"
-                                },
-                                {
-                                    "title": "2",
-                                    "link": "#",
-                                    "class": "active"
-                                },
-                                {
-                                    "title": "3",
-                                    "link": "#"
-                                }
-                            ]
-                        }
-                    }
-                }
-            ],
-            "hidden": 1
-        },
-        {
-            "id": "one",
             "name": "one",
             "desc": "简约风格",
             "options": {
@@ -545,32 +211,43 @@
             "hook": "hook-am-pagination-one",
             "variables": [
                 {
-                    "variable": "pagination-a-bg-color",
-                    "name": "页码背景颜色",
-                    "default": "#fff",
+                    "variable": "pagination-link-bg",
+                    "name": "页码背景色",
+                    "default": "#eee",
                     "used": [
                         {
-                            "selector": "li.am-pagination-prev a",
+                            "selector": ">li>a",
                             "property": "background-color"
                         },
                         {
-                            "selector": "li.am-pagination-next a",
+                            "selector": ".am-pagination-select select",
                             "property": "background-color"
                         }
                     ]
                 },
                 {
-                    "variable": "pagination-a-text-color",
-                    "name": "页码文本颜色",
-                    "default": "#666",
+                    "variable": "pagination-link-color",
+                    "name": "页码颜色",
+                    "default": "#555",
                     "used": [
                         {
-                            "selector": "li.am-pagination-prev a",
+                            "selector": "> li > a",
                             "property": "color"
                         },
                         {
-                            "selector": "li.am-pagination-next a",
+                            "selector": ".am-pagination-select select",
                             "property": "color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "pagination-link-border",
+                    "name": "边框颜色",
+                    "default": "#dfdfdf",
+                    "used": [
+                        {
+                            "selector": ".am-pagination-select select",
+                            "property": "border-color"
                         }
                     ]
                 }
@@ -578,9 +255,6 @@
             "demos": [
                 {
                     "data": {
-                        "options": {
-                            "select": true
-                        },
                         "content": {
                             "prevTitle": "上一页",
                             "prevLink": "#",
@@ -638,27 +312,6 @@
             "default": "default",
             "required": true,
             "dataList": "<%= pkg.themes %>"
-        },
-
-        "options": {
-            "select": {
-                "name": "模式选择",
-                "desc": "模式选择，对应的是theme-2,theme-3",
-                "type": "select",
-                "default": false,
-                "required": false,
-                "dataList": [
-                    {
-                        "value": false,
-                        "title": "默认模式",
-                        "selected": true
-                    },
-                    {
-                        "value": true,
-                        "title": "选择模式"
-                    }
-                ]
-            }
         },
 
         "conent": {

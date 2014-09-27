@@ -36,9 +36,23 @@
 
     "style": "slider.less",
 
+    "demoContent": [
+        {
+            "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg"
+        },
+        {
+            "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg"
+        },
+        {
+            "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg"
+        },
+        {
+            "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg"
+        }
+    ],
+
     "themes": [
         {
-            "id": "default",
             "name": "default",
             "desc": "默认",
             "options": {
@@ -130,21 +144,7 @@
                 {
                     "desc": "默认",
                     "data": {
-                        "sliderConfig": "{}",
-                        "content": [
-                            {
-                                "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg"
-                            }
-                        ]
+                        "sliderConfig": "{}"
                     }
                 },
                 {
@@ -231,7 +231,6 @@
             ]
         },
         {
-            "id": "a1",
             "name": "a1",
             "desc": "圆形控制点",
             "options": {
@@ -278,26 +277,11 @@
             "demos": [{
                 "desc": "",
                 "data": {
-                    "sliderConfig": "{\"directionNav\":false}",
-                    "content": [
-                        {
-                            "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg"
-                        }
-                    ]
+                    "sliderConfig": "{\"directionNav\":false}"
                 }
             }]
         },
         {
-            "id": "a2",
             "name": "a2",
             "desc": "方形控制点",
             "hook": "hook-am-slider-a2",
@@ -343,27 +327,12 @@
             ],
             "demos":[{
                 "data": {
-                    "sliderConfig": "{\"directionNav\":false}",
-                    "content": [
-                        {
-                            "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg"
-                        }
-                    ]
+                    "sliderConfig": "{\"directionNav\":false}"
                 }
             }]
 
         },
         {
-            "id": "a3",
             "name": "a3",
             "desc": "底部黑边圆形控制点",
             "hook": "hook-am-slider-a3",
@@ -420,25 +389,11 @@
             ],
             "demos": [{
                 "data": {
-                    "sliderConfig": "{\"directionNav\":false}",
-                    "content": [
-                        {
-                            "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg"
-                        }]
+                    "sliderConfig": "{\"directionNav\":false}"
                 }
             }]
         },
         {
-            "id": "a4",
             "name": "a4",
             "desc": "底部白边圆形控制点",
             "hook": "hook-am-slider-a4",
@@ -484,26 +439,11 @@
             ],
             "demos": [{
                 "data": {
-                    "sliderConfig": "{\"directionNav\":false}",
-                    "content": [
-                        {
-                            "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg"
-                        }
-                    ]
+                    "sliderConfig": "{\"directionNav\":false}"
                 }
             }]
         },
         {
-            "id": "a5",
             "name": "a5",
             "desc": "长条等分控制点",
             "hook": "hook-am-slider-a5",
@@ -549,26 +489,11 @@
             ],
             "demos": [{
                 "data": {
-                    "sliderConfig": "{\"directionNav\":false}",
-                    "content": [
-                        {
-                            "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg"
-                        }
-                    ]
+                    "sliderConfig": "{\"directionNav\":false}"
                 }
             }]
         },
         {
-            "id": "b1",
             "name": "b1",
             "desc": "方形居中左右箭头",
             "options": {
@@ -603,26 +528,11 @@
             ],
             "demos": [{
                 "data": {
-                    "sliderConfig": "{\"controlNav\":false}",
-                    "content": [
-                        {
-                            "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg"
-                        }
-                    ]
+                    "sliderConfig": "{\"controlNav\":false}"
                 }
             }]
         },
         {
-            "id": "b2",
             "name": "b2",
             "desc": "圆形居中左右箭头",
             "options": {
@@ -657,26 +567,11 @@
             ],
             "demos": [{
                 "data": {
-                    "sliderConfig": "{\"controlNav\":false}",
-                    "content": [
-                        {
-                            "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg"
-                        }
-                    ]
+                    "sliderConfig": "{\"controlNav\":false}"
                 }
             }]
         },
         {
-            "id": "b3",
             "name": "b3",
             "desc": "图片外左右箭头",
             "options": {
@@ -731,7 +626,6 @@
             }]
         },
         {
-            "id": "b4",
             "name": "b4",
             "desc": "图片外左右圆形箭头",
             "options": {
@@ -766,26 +660,11 @@
             ],
             "demos": [{
                 "data": {
-                    "sliderConfig": "{\"controlNav\":false}",
-                    "content": [
-                        {
-                            "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg"
-                        },
-                        {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg"
-                        }
-                    ]
+                    "sliderConfig": "{\"controlNav\":false}"
                 }
             }]
         },
         {
-            "id": "c1",
             "name": "c1",
             "desc": "标题+长条控制点",
             "options": {
@@ -865,7 +744,6 @@
             }]
         },
         {
-            "id": "c2",
             "name": "c2",
             "desc": "标题+方形控制点",
             "options": {
@@ -945,7 +823,6 @@
             }]
         },
         {
-            "id": "c3",
             "name": "c3",
             "desc": "标题+居中左右箭头",
             "options": {
@@ -1058,7 +935,6 @@
             }]
         },
         {
-            "id": "c4",
             "name": "c4",
             "desc": "标题+居底左右箭头",
             "options": {
@@ -1127,7 +1003,6 @@
             }]
         },
         {
-            "id": "d1",
             "name": "d1",
             "desc": "标题+底部圆形左右箭头",
             "options": {
@@ -1211,7 +1086,6 @@
             }]
         },
         {
-            "id": "d2",
             "name": "d2",
             "desc": "浮层标题+底部圆形控制点",
             "options": {
@@ -1314,7 +1188,6 @@
             }]
         },
         {
-            "id": "d3",
             "name": "d3",
             "desc": "标题+缩略图导航",
             "options": {
@@ -1380,120 +1253,7 @@
             }]
         },
         {
-            "id": "clear",
-            "name": "clear",
-            "desc": "ios7默认",
-            "options": {
-                "animation": "slide",
-                "initDelay": 0,
-                "itemWidth": 0
-            },
-            "hook": "hook-am-slider-clear",
-            "variables": [
-                {
-                    "variable": "direction-nav-color",
-                    "name": "前后导航按钮颜色",
-                    "default": "#222",
-                    "used": [
-                        {
-                            "selector": ".am-direction-nav a::before",
-                            "property": "color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "desc-color",
-                    "name": "描述文字颜色",
-                    "default": "#fff",
-                    "used": [
-                        {
-                            "selector": ".am-slider-desc",
-                            "property": "color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "desc-bg-color",
-                    "name": "描述文字背景颜色",
-                    "default": "rgba(0,0,0,0.7)",
-                    "used": [
-                        {
-                            "selector": ".am-slider-desc",
-                            "property": "background-color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "control-nav-bg-color",
-                    "name": "控制点颜色",
-                    "default": "rgba(0,0,0,0.5)",
-                    "used": [
-                        {
-                            "selector": ".am-control-nav li a",
-                            "property": "background-color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "control-nav-hover-bg-color",
-                    "name": "控制点Hover颜色",
-                    "default": "rgba(0,0,0,0.7)",
-                    "used": [
-                        {
-                            "selector": ".am-control-nav li a:hover",
-                            "property": "background-color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "control-nav-active-bg-color",
-                    "name": "控制点激活颜色",
-                    "default": "#428bca",
-                    "used": [
-                        {
-                            "selector": ".am-control-nav li a.am-active",
-                            "property": "background-color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "pauseplay-color",
-                    "name": "播放暂停按钮颜色",
-                    "default": "#000",
-                    "used": [
-                        {
-                            "selector": ".am-pauseplay a",
-                            "property": "color"
-                        }
-                    ]
-                }
-            ],
-            "demos": [
-                {
-                    "desc": "默认",
-                    "data": {
-                        "sliderConfig": "{}",
-                        "content": [
-                            {
-                                "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "hidden": 1
-        },
-        {
-            "id": "one",
+
             "name": "one",
             "desc": "简约风格",
             "options": {
@@ -1504,23 +1264,12 @@
             "hook": "hook-am-slider-one",
             "variables": [
                 {
-                    "variable": "direction-nav-color",
-                    "name": "前后导航按钮颜色",
-                    "default": "rgba(0,0,0,0.7)",
-                    "used": [
-                        {
-                            "selector": ".am-direction-nav a::before",
-                            "property": "color"
-                        }
-                    ]
-                },
-                {
                     "variable": "slider-dese-color",
                     "name": "描述文字颜色",
                     "default": "#fff",
                     "used": [
                         {
-                            "selector": ".am-slider-desc",
+                            "selector": ".am-viewport .am-slider-desc",
                             "property": "color"
                         }
                     ]
@@ -1531,7 +1280,7 @@
                     "default": "rgba(0,0,0,0.5)",
                     "used": [
                         {
-                            "selector": ".am-slider-desc",
+                            "selector": ".am-viewport .am-slider-desc",
                             "property": "background-color"
                         }
                     ]
@@ -1541,9 +1290,9 @@
                 {
                     "desc": "",
                     "data": {
-                        "sliderConfig": {
-                            "controlNav": false
-                        },
+
+                        "sliderConfig": "{\"directionNav\":false}",
+
                         "content": [
                             {
                                 "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg",

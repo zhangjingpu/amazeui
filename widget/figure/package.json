@@ -32,13 +32,22 @@
     "template": "figure.hbs",
 
     "styleDependencies": [
+        "button.less",
+        "ui.share.less",
+        "ui.modal.less",
+        "ui.pureview.less"
     ],
 
     "style": "figure.less",
 
+    "demoContent": {
+        "img": "http://amui.qiniudn.com/pure-1.jpg?imageView2/0/w/640",
+        "rel": "http://amui.qiniudn.com/pure-1.jpg",
+        "figcaption": "春天的花开秋天的风以及冬天的落阳"
+    },
+
     "themes": [
         {
-            "id": "default",
             "name": "default",
             "desc": "灰色边框",
             "options": {
@@ -76,11 +85,7 @@
                     "data": {
                         "options": {
                             "figcaptionPosition": "bottom",
-                            "zoomble": false
-                        },
-                        "content": {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/WindMillLights_ZH-CN10720233846_1366x768.jpg",
-                            "figcaption": "加州风力发电场的圣诞灯饰"
+                            "autoZoom": 1
                         }
                     }
                 }
@@ -88,58 +93,6 @@
             ]
         },
         {
-            "id": "clear",
-            "name": "clear",
-            "desc": "ios7灰色边框",
-            "options": {
-                "figcaptionPosition": "bottom",
-                "zoomble": false
-            },
-            "hook": "hook-am-figure-clear",
-            "variables": [
-                {
-                    "variable": "figure-img-border-color",
-                    "name": "图片边框颜色",
-                    "default": "#848484",
-                    "used": [
-                        {
-                            "selector": "img",
-                            "property": "border-color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "figure-color",
-                    "name": "文字颜色",
-                    "default": "#333",
-                    "used": [
-                        {
-                            "selector": "figcaption",
-                            "property": "color"
-                        }
-                    ]
-                }
-            ],
-            "demos": [
-                {
-                    "desc": "",
-                    "data": {
-                        "options": {
-                            "figcaptionPosition": "bottom",
-                            "zoomble": false
-                        },
-                        "content": {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/WindMillLights_ZH-CN10720233846_1366x768.jpg",
-                            "figcaption": "加州风力发电场的圣诞灯饰"
-                        }
-                    }
-                }
-
-            ],
-            "hidden": 1
-        },
-        {
-            "id": "one",
             "name": "one",
             "desc": "简约风格",
             "options": {
@@ -188,11 +141,7 @@
                     "data": {
                         "options": {
                             "figcaptionPosition": "bottom",
-                            "zoomble": false
-                        },
-                        "content": {
-                            "img": "http://s.cn.bing.net/az/hprichbg/rb/WindMillLights_ZH-CN10720233846_1366x768.jpg",
-                            "figcaption": "加州风力发电场的圣诞灯饰"
+                            "autoZoom": 1
                         }
                     }
                 }
@@ -206,7 +155,12 @@
         "util.fastclick.js"
     ],
 
-    "jsDependencies": [],
+    "jsDependencies": [
+        "zepto.pinchzoom.js",
+        "ui.pureview.js",
+        "ui.share.js",
+        "ui.modal.js"
+    ],
 
     "script": "figure.js",
 
@@ -252,6 +206,24 @@
                     {
                         "value": "top",
                         "title": "图片上方"
+                    }
+                ]
+            },
+            "zoomAble": {
+                "name": "图片缩放",
+                "desc": "图片触控缩放功能",
+                "type": "select",
+                "default": true,
+                "required": true,
+                "dataList": [
+                    {
+                        "value": true,
+                        "title": "启用",
+                        "selected": true
+                    },
+                    {
+                        "value": false,
+                        "title": "禁用"
                     }
                 ]
             }

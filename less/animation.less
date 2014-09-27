@@ -88,6 +88,11 @@
   animation-name: am-slide-right;
 }
 
+.am-animation-slide-top-fixed {
+  -webkit-animation-name: am-slide-top-fixed;
+  animation-name: am-slide-top-fixed;
+}
+
 
 /* Shake */
 
@@ -102,6 +107,13 @@
   .animation(am-spin 2s infinite linear);
 }
 
+.am-animation-left-spring {
+  .animation(am-left-spring .3s ease-in-out);
+}
+
+.am-animation-right-spring {
+  .animation(am-right-spring .3s ease-in-out);
+}
 
 // Modifiers
 // ========================================================================
@@ -109,6 +121,11 @@
 .am-animation-reverse {
   -webkit-animation-direction: reverse;
   animation-direction: reverse;
+}
+
+.am-animation-paused {
+  -webkit-animation-play-state: paused !important;
+  animation-play-state: paused !important;
 }
 
 
@@ -385,3 +402,53 @@
   100% { transform: rotate(359deg); }
 }
 
+
+/* Spring */
+
+@-webkit-keyframes am-right-spring {
+  0% {
+    .translate();
+  }
+  50% {
+    .translate(-20%)
+  }
+  100% {
+    .translate();
+  }
+}
+
+@keyframes am-right-spring {
+  0% {
+    .translate();
+  }
+  50% {
+    .translate(-20%)
+  }
+  100% {
+    .translate();
+  }
+}
+
+@-webkit-keyframes am-left-spring {
+  0% {
+    .translate();
+  }
+  50% {
+    .translate(20%);
+  }
+  100% {
+    .translate();
+  }
+}
+
+@keyframes am-left-spring {
+  0% {
+    .translate();
+  }
+  50% {
+    .translate(20%);
+  }
+  100% {
+    .translate();
+  }
+}

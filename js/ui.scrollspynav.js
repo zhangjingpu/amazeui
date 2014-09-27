@@ -1,17 +1,20 @@
 define(function(require, exports, module) {
-
-    'use strict';
+    "use strict";
 
     require('core');
+    require('ui.smooth-scroll');
 
     var $ = window.Zepto,
         UI = $.AMUI;
 
+    /**
+     * @via https://github.com/uikit/uikit/
+     * @license https://github.com/uikit/uikit/blob/master/LICENSE.md
+     */
 
     // ScrollSpyNav Class
 
     var ScrollSpyNav = function(element, options) {
-
         this.options = $.extend({}, ScrollSpyNav.DEFAULTS, options);
         this.$element = $(element);
         this.anchors = [];
@@ -29,20 +32,19 @@ define(function(require, exports, module) {
         this.$window = $(window).on('scroll.scrollspynav.amui', processRAF)
             .on('resize.scrollspynav.amui orientationchange.scrollspynav.amui', UI.utils.debounce(processRAF, 50));
 
-       processRAF();
+        processRAF();
         this.scrollProcess();
     };
 
     ScrollSpyNav.DEFAULTS = {
-        cls: 'am-active',
-        topOffset: 0,
-        leftOffset: 0,
+        className: {
+            active: 'am-active'
+        },
         closest: false,
         smooth: true
     };
 
     ScrollSpyNav.prototype.process = function() {
-
         var scrollTop = this.$window.scrollTop(),
             options = this.options,
             inViews = [],
@@ -72,10 +74,10 @@ define(function(require, exports, module) {
             if (!$target) return;
 
             if (options.closest) {
-                $links.closest(options.closest).removeClass(options.cls);
-                $links.filter('a[href="#' + $target.attr('id') + '"]').closest(options.closest).addClass(options.cls);
+                $links.closest(options.closest).removeClass(options.className.active);
+                $links.filter('a[href="#' + $target.attr('id') + '"]').closest(options.closest).addClass(options.className.active);
             } else {
-                $links.removeClass(options.cls).filter('a[href="#' + $target.attr('id') + '"]').addClass(options.cls);
+                $links.removeClass(options.className.active).filter('a[href="#' + $target.attr('id') + '"]').addClass(options.className.active);
             }
         }
     };
@@ -85,20 +87,16 @@ define(function(require, exports, module) {
         var $links = this.$links;
 
         // smoothScroll
-
         if (this.options.smooth) {
-            require.async(['ui.smooth-scroll'], function() {
-                $links.on('click', function(e) {
-                    e.preventDefault();
+            $links.on('click', function(e) {
+                e.preventDefault();
 
-                    var $this = $(this),
-                        target = $this.attr('href'),
-                        position = $this.data('am.smoothScroll');
+                var $this = $(this),
+                    $target = $($this.attr('href'));
 
-                    !position && $this.data('am.smoothScroll', (position = $(target).offset().top));
+                if (!$target) return;
 
-                    $(window).smoothScroll(position);
-                });
+                $(window).smoothScroll({position: $target.offset().top});
             });
         }
     };

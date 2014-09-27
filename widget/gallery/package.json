@@ -1,7 +1,7 @@
 {
     "name": "gallery",
 
-    "version": "1.2.0",
+    "version": "1.3.0",
 
     "localName": {
         "en": "Gallery",
@@ -32,14 +32,43 @@
     "template": "gallery.hbs",
 
     "styleDependencies": [
-        "zepto.touchgallery.less"
+        "button.less",
+        "ui.share.less",
+        "ui.modal.less",
+        "ui.pureview.less"
     ],
 
     "style": "gallery.less",
 
+    "demoContent": [
+        {
+            "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg",
+            "link": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg",
+            "title": "远方 有一个地方 那里种有我们的梦想",
+            "desc": "2375-09-26"
+        },
+        {
+            "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg",
+            "link": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg",
+            "title": "某天 也许会相遇 相遇在这个好地方",
+            "desc": "2375-09-26"
+        },
+        {
+            "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg",
+            "link": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg",
+            "title": "不要太担心 只因为我相信",
+            "desc": "2375-09-26"
+        },
+        {
+            "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg",
+            "link": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg",
+            "title": "终会走过这条遥远的道路",
+            "desc": "2375-09-26"
+        }
+    ],
+
     "themes": [
         {
-            "id": "default",
             "name": "default",
             "desc": "无边框",
             "options": {
@@ -78,33 +107,7 @@
                         "options": {
                             "cols": 2,
                             "gallery": true
-                        },
-                        "content": [
-                            {
-                                "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg",
-                                "link": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg",
-                                "title": "远方 有一个地方 那里种有我们的梦想",
-                                "desc": "2375-09-26"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg",
-                                "link": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg",
-                                "title": "某天 也许会相遇 相遇在这个好地方",
-                                "desc": "2375-09-26"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg",
-                                "link": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg",
-                                "title": "不要太担心 只因为我相信",
-                                "desc": "2375-09-26"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg",
-                                "link": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg",
-                                "title": "终会走过这条遥远的道路",
-                                "desc": "2375-09-26"
-                            }
-                        ]
+                        }
                     }
                 },
                 {
@@ -113,39 +116,12 @@
                         "options": {
                             "cols": 3,
                             "gallery": true
-                        },
-                        "content": [
-                            {
-                                "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg",
-                                "link": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg",
-                                "title": "远方 有一个地方 那里种有我们的梦想",
-                                "desc": "2375-09-26"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg",
-                                "link": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg",
-                                "title": "某天 也许会相遇 相遇在这个好地方",
-                                "desc": "2375-09-26"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg",
-                                "link": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg",
-                                "title": "不要太担心 只因为我相信",
-                                "desc": "2375-09-26"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg",
-                                "link": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg",
-                                "title": "终会走过这条遥远的道路",
-                                "desc": "2375-09-26"
-                            }
-                        ]
+                        }
                     }
                 }
             ]
         },
         {
-            "id": "t1",
             "name": "overlay",
             "desc": "浮层标题",
             "options": {
@@ -166,7 +142,7 @@
                     ]
                 },
                 {
-                    "variable": "gallery-title-bg-color",
+                    "variable": "gallery-title-bg",
                     "name": "标题背景颜色",
                     "default": "rgba(0,0,0,0.5)",
                     "used": [
@@ -184,35 +160,12 @@
                         "options": {
                             "cols": 2,
                             "gallery": true
-                        },
-                        "content": [
-                            {
-                                "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg",
-                                "link": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg",
-                                "title": "远方 有一个地方 那里种有我们的梦想"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg",
-                                "link": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg",
-                                "title": "某天 也许会相遇 相遇在这个好地方"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg",
-                                "link": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg",
-                                "title": "不要太担心 只因为我相信"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg",
-                                "link": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg",
-                                "title": "终会走过这条遥远的道路"
-                            }
-                        ]
+                        }
                     }
                 }
             ]
         },
         {
-            "id": "t2",
             "name": "bordered",
             "desc": "容器边框",
             "options": {
@@ -250,39 +203,12 @@
                     "data": {
                         "options": {
                             "cols": 2
-                        },
-                        "content": [
-                            {
-                                "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg",
-                                "links": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg",
-                                "title": "远方 有一个地方 那里种有我们的梦想",
-                                "desc": "2375-09-26"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg",
-                                "links": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg",
-                                "title": "某天 也许会相遇 相遇在这个好地方",
-                                "desc": "2375-09-26"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg",
-                                "links": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg",
-                                "title": "不要太担心 只因为我相信",
-                                "desc": "2375-09-26"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg",
-                                "links": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg",
-                                "title": "终会走过这条遥远的道路",
-                                "desc": "2375-09-26"
-                            }
-                        ]
+                        }
                     }
                 }
             ]
         },
         {
-            "id": "t3",
             "name": "imgbordered",
             "desc": "图片边框",
             "options": {
@@ -320,111 +246,12 @@
                     "data": {
                         "options": {
                             "cols": 2
-                        },
-                        "content": [
-                            {
-                                "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg",
-                                "link": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg",
-                                "title": "远方 有一个地方 那里种有我们的梦想",
-                                "desc": "2375-09-26"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg",
-                                "link": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg",
-                                "title": "某天 也许会相遇 相遇在这个好地方",
-                                "desc": "2375-09-26"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg",
-                                "link": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg",
-                                "title": "不要太担心 只因为我相信",
-                                "desc": "2375-09-26"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg",
-                                "link": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg",
-                                "title": "终会走过这条遥远的道路",
-                                "desc": "2375-09-26"
-                            }
-                        ]
+                        }
                     }
                 }
             ]
         },
         {
-            "id": "clear",
-            "name": "clear",
-            "desc": "ios7默认",
-            "options": {
-                "cols": 2,
-                "gallery": true
-            },
-            "hook": "hook-am-gallery-clear",
-            "variables": [
-                {
-                    "variable": "gallery-title-color",
-                    "name": "标题颜色",
-                    "default": "#333",
-                    "used": [
-                        {
-                            "selector": ".am-gallery-title",
-                            "property": "color"
-                        }
-                    ]
-                },
-                {
-                    "variable": "gallery-desc-color",
-                    "name": "描述信息颜色",
-                    "default": "#666",
-                    "used": [
-                        {
-                            "selector": ".am-gallery-desc",
-                            "property": "color"
-                        }
-                    ]
-                }
-            ],
-            "demos": [
-                {
-                    "desc": "",
-                    "data": {
-                        "options": {
-                            "cols": 2,
-                            "gallery": true
-                        },
-                        "content": [
-                            {
-                                "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg",
-                                "link": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg",
-                                "title": "远方 有一个地方 那里种有我们的梦想",
-                                "desc": "2375-09-26"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg",
-                                "link": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg",
-                                "title": "某天 也许会相遇 相遇在这个好地方",
-                                "desc": "2375-09-26"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg",
-                                "link": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg",
-                                "title": "不要太担心 只因为我相信",
-                                "desc": "2375-09-26"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg",
-                                "link": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg",
-                                "title": "终会走过这条遥远的道路",
-                                "desc": "2375-09-26"
-                            }
-                        ]
-                    }
-                }
-            ],
-            "hidden": 1
-        },
-        {
-            "id": "one",
             "name": "one",
             "desc": "简约风格",
             "options": {
@@ -434,12 +261,12 @@
             "hook": "hook-am-gallery-one",
             "variables": [
                 {
-                    "variable": "gallery-bg-color",
+                    "variable": "gallery-bg",
                     "name": "背景颜色",
                     "default": "#fff",
                     "used": [
                         {
-                            "selector": ".am-gallery-item",
+                            "selector": "",
                             "property": "background-color"
                         }
                     ]
@@ -447,7 +274,7 @@
                 {
                     "variable": "gallery-title-color",
                     "name": "标题颜色",
-                    "default": "#666",
+                    "default": "#555",
                     "used": [
                         {
                             "selector": ".am-gallery-title",
@@ -465,6 +292,28 @@
                             "property": "color"
                         }
                     ]
+                },
+                {
+                    "variable": "gallery-more-bg",
+                    "name": "更多背景",
+                    "default": "#dfdfdf",
+                    "used": [
+                        {
+                            "selector": ".am-gallery-more a",
+                            "property": "background-color"
+                        }
+                    ]
+                },
+                {
+                    "variable": "gallery-more-link-color",
+                    "name": "更多文字颜色",
+                    "default": "#555",
+                    "used": [
+                        {
+                            "selector": ".am-gallery-more a",
+                            "property": "color"
+                        }
+                    ]
                 }
             ],
             "demos": [
@@ -474,33 +323,7 @@
                         "options": {
                             "cols": 2,
                             "gallery": true
-                        },
-                        "content": [
-                            {
-                                "img": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg",
-                                "link": "http://cn.bing.com/az/hprichv/LondonTrainStation_GettyRR_139321755_ZH-CN742316019.jpg",
-                                "title": "远方 有一个地方 那里种有我们的梦想",
-                                "desc": "2375-09-26"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg",
-                                "link": "http://s.cn.bing.net/az/hprichbg/rb/CardinalsBerries_ZH-CN10679090179_1366x768.jpg",
-                                "title": "某天 也许会相遇 相遇在这个好地方",
-                                "desc": "2375-09-26"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg",
-                                "link": "http://s.cn.bing.net/az/hprichbg/rb/QingdaoJiaozhou_ZH-CN10690497202_1366x768.jpg",
-                                "title": "不要太担心 只因为我相信",
-                                "desc": "2375-09-26"
-                            },
-                            {
-                                "img": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg",
-                                "link": "http://s.cn.bing.net/az/hprichbg/rb/FennecFox_ZH-CN13720911949_1366x768.jpg",
-                                "title": "终会走过这条遥远的道路",
-                                "desc": "2375-09-26"
-                            }
-                        ]
+                        }
                     }
                 }
             ]
@@ -514,7 +337,9 @@
 
     "jsDependencies": [
         "zepto.pinchzoom.js",
-        "zepto.touchgallery.js"
+        "ui.pureview.js",
+        "ui.share.js",
+        "ui.modal.js"
     ],
 
     "script": "gallery.js",

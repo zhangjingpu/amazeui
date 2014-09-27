@@ -8,7 +8,10 @@ define(function(require, exports, module) {
         UI = $.AMUI;
 
 
-    // Sticky Class
+    /**
+     * @via https://github.com/uikit/uikit/blob/master/src/js/scrollspy.js
+     * @license https://github.com/uikit/uikit/blob/master/LICENSE.md
+     */
 
     var ScrollSpy = function(element, options) {
 
@@ -31,8 +34,10 @@ define(function(require, exports, module) {
 
     ScrollSpy.DEFAULTS = {
         animation: 'fade',
-        inViewCls: 'am-scrollspy-inview',
-        initCls: 'am-scrollspy-init',
+        className: {
+            inView: 'am-scrollspy-inview',
+            init: 'am-scrollspy-init'
+        },
         repeat: true,
         delay: 0,
         topOffset: 0,
@@ -51,7 +56,7 @@ define(function(require, exports, module) {
             if(this.timer) clearTimeout(this.timer);
 
             if(!this.initInView) {
-                $element.addClass(options.initCls);
+                $element.addClass(options.className.init);
                 this.offset = $element.offset();
                 this.initInView = true;
 
@@ -60,7 +65,7 @@ define(function(require, exports, module) {
 
             this.timer = setTimeout(function(){
                 if(inView) {
-                    $element.addClass(options.inViewCls + animation).width();
+                    $element.addClass(options.className.inView + animation).width();
                 }
             }, options.delay);
 
@@ -69,7 +74,7 @@ define(function(require, exports, module) {
         }
 
         if (!inView && this.inViewState && options.repeat) {
-            $element.removeClass(options.inViewCls + animation);
+            $element.removeClass(options.className.inView + animation);
 
             this.inViewState = false;
 
@@ -107,7 +112,7 @@ define(function(require, exports, module) {
             var $this = $(this),
                 options = UI.utils.options($this.attr('data-am-scrollspy'));
 
-            Plugin.call($this, options);
+            $this.scrollspy(options);
         });
     });
 
